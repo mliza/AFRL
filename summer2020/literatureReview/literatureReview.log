@@ -1,13 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  28 MAY 2020 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 MAY 2020 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **literatureReview.tex
 (./literatureReview.tex
 LaTeX2e <2018-12-01>
-
-(/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/templates/homeworkTemp
-late.tex (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+(../latexResources/homeworkTemplate.tex
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
@@ -1112,19 +1111,15 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 \@float@every@table=\toks48
 Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 )
-(/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/equationMacros.
-tex
+(../latexResources/equationMacros.tex
 (/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/fluidMacros.tex
 )
 (/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/vectorCalcMacro
 s.tex)
 (/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/emMacros.tex)
 (/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/genMathMacros.t
-ex))
-(/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/mathMacros.tex)
-
-(/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/pictureMacros.t
-ex) (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
+ex)) (../latexResources/mathMacros.tex) (../latexResources/pictureMacros.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
@@ -1641,12 +1636,12 @@ Package logreq Info: Writing requests to 'literatureReview.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  44344 strings out of 492616
- 900368 string characters out of 6129482
- 1457918 words of memory out of 5000000
+ 899819 string characters out of 6129482
+ 1457369 words of memory out of 5000000
  47606 multiletter control sequences out of 15000+600000
  576152 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,19n,101p,943b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,19n,101p,895b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/loca
 l/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/
@@ -1668,7 +1663,7 @@ t/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on literatureReview.pdf (6 pages, 324453 bytes).
+Output written on literatureReview.pdf (6 pages, 324476 bytes).
 PDF statistics:
  227 PDF objects out of 1000 (max. 8388607)
  175 compressed objects within 2 object streams

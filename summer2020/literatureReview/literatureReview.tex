@@ -1,0 +1,120 @@
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/templates/homeworkTemplate}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/equationMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/mathMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/pictureMacros}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{references.bib}
+\Header{\today}{Literature Review}{Martin E. Liza}
+\begin{document}
+    \section{Physics and Computation of Aero-Optics \cite{physicsAndComputationOfAeroOptics}} 
+        \begin{itemize} 
+            \item The timescale for optical propagation is negligibly short relative to flow timescales, and hence optical popagation can be solved in a frozen flow field at each time instant. 
+            \item \textbf{OPL:} Optical Path Length. 
+            \item \textbf{OPD:} Optical Path Difference.
+            \item \textbf{SR:} Strehl Ratio.
+            \item $ \Function{OPD}{x,y,t} = \underbrace{ \Function{OPD}{x,y} }_{\text{steady-lensing}} + \underbrace{\SqBracket{ \Function{A}{t}x + \Function{B}{t}y }}_{\text{beam jitter}} + \underbrace{ \Function{OPD}{x,y,t} }_{\text{beam shaping}} $
+            \item \textbf{steady-lensing:} function only of the time-averaged density field and impose a steady distortion such as defocus. 
+            \item \textbf{beam jitter:} does not change spatial distribution from the outgoing beam but simply redirects it in directions defined by $\Function{A}{t}$ and $\Function{B}{t}$. 
+            \item \textbf{beam shaping:} causes the beam to change its shape and intensity distribution. 
+            \item Given the OPD profile after the beam passes the turbulence region, one can solve its free space propagation using Fourier optics to obtain the exact far-field projection.
+            \item \textbf{SR:} measure of beam quality relative to a diffraction-limited beam at each instant. 
+            \item Computation of aero-optics consist of two essential parts: solutions of the aberrating flow field via CFD and propagation of the optical beam through the aberrating flow to the target. 
+            \item Beam propagation is computed by a combination of ray tracing with Fourier optics.
+            \item To accurately compute the index of refraction field, one must capture turbulence scales over all optically relevant wave numbers and frequencies. 
+            \item Euler equations do not describe the correct physics of refractive index fluctuation in a turbulent flow and must rely on numerical dissipation to mimic the effect of physical viscosity. 
+            \item Steady RANS calculates all turbulent scales, resulting in an ensemble-average (time-averaged) density field from which the steady-lensing effects can be evaluated but not the beam jitter and beam shaping.      
+            \item A hybrid RANS/LES model reduces computational costs for wall-bounded flows at high Reynolds numbers.
+            \item A lack of flow resolution will cause errors in the computation of the optical phase when the beam is traced through the turbulence flow.
+            \item Optical effects are negligible at a small scale in turbulence flow. 
+            \item Experiments suggested that the majority of optically active structures in compressible boundary layers are located in the outer region of the boundary layer, moving at $0.82 - 0.85$ times the free stream velocity.  
+            \item The predominant mechanism for density fluctuations in the compressible boundary layers is thought, to be adiabatic heating/cooling due to velocity fluctuations via the strong Reynolds analogy, as pressure fluctuations inside the boundary layers are much smaller than temperature fluctuations. 
+            \item Optical distortions by the fully developed wake were insensitive to the Reynolds number, whereas distortions by the separated shear layers were sensitive to it.
+        \end{itemize}
+
+
+    \section{Aero-optical effects in non-equilibrium air \cite{doi:10.2514/6.2018-3904}}
+        \begin{itemize}
+            \item In a flow environment, which may induce real gas effects and chemistry, the refractive index depends on the air density, composition and internal state. 
+            \item In many cases, flows behind shocks and in boundary layers are not in thermal equilibrium and thus may have associate with them thermal aero-optical effects significantly different from those associated with thermal equilibrium. 
+            \item The refractive index of air is proportional to the gas density, with the constant of proportionality known as the Gladstone-Dale constant. $\Sub{R}{g} = \frac{\Function{\alpha}{\omega}}{2\Sub{\epsilon}{0}}$, where: $\Function{\alpha}{\omega}$ is the polarization constant and $\Sub{\epsilon}{0}$ is the permittivity in vacuum. 
+            \item The Gladstone-Dale constant might not be constant at high speed flows because particles are tend to be found in their excited state. 
+            \item $n = 1 + \Sub{R}{g}N$, where: $n$ is the index of refraction and $N$ is the density of the gas in molecules per cubic meter.  
+            \item In thermal equilibrium the fractional population and polarization obeys the Boltzmann distribution; however, for a non-equilibrium, the fractional population and polarization does not necessary obeys the Boltzmann distribution.  
+            \item The total energy of a state is given by the summation of electronic, vibrational and rotational energies; which are determined by the molecular vibrational and rotational constants.
+            \item A gas with a higher temperature will exhibit a larger refractive index. 
+            \item For nitrogen and oxygen, vibrational excitation has a significantly larger effect on the polarization compared with the rotational excitation. 
+        \end{itemize}
+
+
+    \section{Aero-Optic Distortion in Transonic and Hypersonic Turbulent Boundary Layers \cite{doi:10.2514/1.41453}}
+        \begin{itemize}
+            \item In a compressible boundary layer, the density, temperature, pressure and velocity vary in space and time. However, only the density fluctuations are relevant to optical distortion. 
+            \item The density fluctuations can be related to the velocity fluctuations using the Strong Reynolds Analogy (SRA). 
+            \item Accepting that the pressure fluctuations are small, the ideal gas law for small fluctuations leads to: $\frac{\rho^{\prime}}{\bar{\rho}} = \Parenthesis{\gamma -1} M^2\frac{u^{\prime}}{\bar{U}} $
+            \item From previous equation, it is expected that aero-optical distortions increase at higher Mach numbers and lower altitudes. 
+            \item The linking equation assumes that the density fluctuations are random and normally distributed an that the integration length $L$ is much greater than the integral scale $\Lambda$.
+            \item $\UpSub{OPD}{rms}{2} = 2 \UpSub{R}{g}{2} \int^{L}_{0} \bar{\Function{\rho^{{\prime}^2}}{y}} \Function{\Lambda}{y}dy  $ Linking equation. 
+            \item In the inner region of a turbulent boundary layer, the structures tend to organize into long, streamwise streaks; the inner region extends to approximately $10-15\%$ of the boundary layer thickness.
+            \item In the outer layer, of the boundary layer is dominated by structures sometimes termed large scale motions. 
+            \item Because the phase distortion is integrated through the boundary layer, the contributions from the larger scale structures in the outer region wold be expected to be significant. However, the linking equation shows that the variation of relative density fluctuations with height above the wall must also be taken into consideration. The density fluctuations are stronger in the inner half of the boundary layer, but in a compressible flow the local density decreases sharply close to the wall especially in high Mach number flows. 
+            \item There are two different ways used to describe the degree of aberration in a wave front: the root-mean-square variation across the wave front, and the SR, defined as the ratio between the measure of irradiance in the far field to the diffraction limited theoretical maximum. 
+            \item Two ways of calculating SR. SR is calculated at a fixed point (centerline); others calculate the SR at the point of maximum irradiance, regardless of its location. 
+        \end{itemize}
+
+
+    \section{HyperCode:A framework for high-order accurate turbulent non-equilibrium hypersonic flow simulation \cite{doi:10.2514/6.2020-2192}} 
+        \begin{itemize}
+            \item Coupled, multi-scale, multi-physics interactions not only have a significant role in signal propagation and sensing in extreme environments but also affect crucial decisions regarding thermal management, path planning and control.
+            \item \textbf{HyperCode:} code that has unique non-equilibrium prediction capabilities for multicomponent hypersonic flows.
+            \item \textbf{OTF:} Optical Transfer Function.  
+            \item \textbf{PSF:} Point Spread Function.
+            \item For temporal behavior one should first integrate OTFs or PSFs over an exposure window before calculating spatial parameters. This procedure yields primarily information for image or beam quality, since wave-ront and phase errors are readily available.
+        \end{itemize}
+        
+
+    \section{Dome and mirror seeing estimates from the Thirty Meter Telescope \cite{10.1117/12.789636}}
+        \begin{itemize}
+            \item \textbf{Mirror Seeing:} degradation of the telescope image due to variations in the index of refraction of the air. 
+            \item \textbf{Dome Seeing:} degradation of telescope image quality due to variations in the index of refraction of the air by the dome. 
+            \item \textbf{PSSn:} Point Source Sensitivity normalized. This metric is representative of the relative integration time of a background limited point source observation normalized to the atmospheric seeing.
+            \item Its assumed that the diffraction image is computed by summing the OPD error through the system, applying this to the exit pupil, and propagating from the exit pupil using the Fourier transform of the exit pupil ignoring the propagation effects within the system. 
+            \item Near field diffraction effects are ignored due to the large optical paths involved in the telescope and the large thermal mass of the mirror.
+            \item Matlab script was used to perform calculations.
+        \end{itemize}
+    
+
+    \section{Role of High Fidelity Nonequilibrium Modeling in Laminar and Turbulent Flows for High Speed ISR Missions \cite{doi:10.2514/6.2016-4317}}
+        \begin{itemize}
+            \item \textbf{DNS:} Direct Numerical Simulations.
+            \item DNS of turbulence are performed for low Mach number compressible channel ideal gas flow. 
+            \item \textbf{STS:} State to State kinetics. 
+            \item \textbf{LLTR:} Lumped Landau Teller Relaxation.
+            \item Laminar OPD's exhibit a tilt aberration with a positive gradient in the flow direction while in case of turbulent flows the integral length scale of the flow begins to dominate the OPD spatial behavior resulting in higher order aberrations.
+            \item The complexity of hypersonic turbulent nonequilibrium boundary layers still merits the development of models that will retain both the spatial and temporal aero-optical behavior, that can lead to incorporating aberration mitigation strategies into sensor design.  
+            \item Hypersonic flow solvers currently employ simple algebraic or two equation turbulence models coupled with thermochemical nonequilibrium models which involve when needed macroscopic approximations and may therefore not be suitable or ISR studies due to the simplifications that prevent the proper resolution of the space and time scales that may affect the signal. 
+            \item Many current off the shelf (COTS) software technologies in this context lack key mechanisms that describe the interplay between turbulence and nonequilibrium distributions of molecules over vibrational, rotational and/or translational states. This leads to high uncertainty levels in the results and thus to potentially significant errors in signals analysis; other affected predictions included thrust, drag, aerodynamic heating, surface temperatures, chemical compositions, boundary layer transition and ablation.
+            \item Nonequilibrium effect due to Internal energy exchanges between modes of vibration, rotation, translation, dissociation, recombination and radiation are calculated by two types of models.
+            \item The LLTR model allows to calculate the coupling of vibrational-translational and dissociation reaction mechanisms on the flow physics, under the assumption that the molecule behaves as a harmonic oscillator. 
+            \item The STS model allows for prediction of nonequilibrium molecular distributions of energy among various internal energy modes, as well as state specific transport coefficient.
+            \item Detailed representation of molecular distributions over internal energy states may be necessary for proper predictions of surface heat transfer and signal propagation errors.
+            \item In conducting an aero-optics analysis o the signal propagation in high speed ISR missions, one would have to study teh propagation of E\&M waves through a nonequilibrium flow field.
+            \item The refractive index $N$ of air is given by: $N-1 = \rho\Parenthesis{A+\frac{B}{\lambda^2}}$, where $\rho$ is the mixture density, $\lambda$ is the signal's wavelength, and $A$ and $B$ are constants depending on the air species. 
+            \item The OPL is the distance light travels in vacuum in the same time it travels a distance $L$ in a medium. 
+            \item The difference between two OPL's at two locations is called OPD.
+            \item An OPD map, also called wave-front, is the two-dimensional spatial distribution over an aperture of the deviation of the OPL of the signal from a reference distance.
+            \item The length scale over which the phase error due to passage through a given column of medium equals to $1\Units{radian}$ is called the coherence length $\Sub{r}{0}$; which is directly tied to the turbulence correlation and integral length scales. 
+            \item The coherence time is defined by the ratio between the coherence length and the average medium velocity relative to the sensor window; it sets the lower limit for exposure time before serious image degradation. 
+            \item An optical mesh of resolution comparable to that of the computational mesh and aligned with the signal propagation direction is defined. 
+            \item For a single flow field, either a steady state simulation converged solution or at a corresponding time of an unsteady solution, the process can be as follow: calculate the OPL for each cell o the optical mesh, then integrate the paths to obtain the total OPL for each point on the aperture. Subtracting the reference OPL, yields the OPD map. The OPD map can be further post processed for various optical parameters; such as SR, OTF, PSF.   
+        \end{itemize}
+
+
+	\section{Aero-thermal simulations of the TMT Laser Guide Star Facility \cite{10.1117/12.2057208}} 
+        \begin{itemize}
+            \item
+        \end{itemize}
+		
+		
+    \newpage
+    \printbibliography[title=Bibliography]
+\end{document}

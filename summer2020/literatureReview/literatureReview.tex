@@ -8,6 +8,7 @@
 \usepackage[backend=biber, sorting=none]{biblatex}
 \addbibresource{references.bib}
 \Header{\today}{Literature Review}{Martin E. Liza}
+
 \begin{document}
     \section{Physics and Computation of Aero-Optics \cite{physicsAndComputationOfAeroOptics}} 
         \begin{itemize} 
@@ -114,9 +115,14 @@
 
 	\section{Aero-thermal simulations of the TMT Laser Guide Star Facility \cite{10.1117/12.2057208}} 
         \begin{itemize}
-            \item
+            \item The time-step used in the initial simulation was $300\Units{s}$. This is too coarse for beam jitter estimates but it is sufficient for temperature calculations.
+            \item The grid of each region has been generated in such a way that each interface facet is common to the two cells of the two region involved. Convection, conduction and radiation heat transfer between regions is taking place through all interfaces.
         \end{itemize}
 		
+        \section{Analytical Approach for Aero-Optical \& Atmospheric Effects in Supersonic Flow Fields \cite{doi:10.2514/6.2020-0684}} 
+        \begin{itemize}
+            \item
+        \end{itemize}
 		
     \newpage
     \printbibliography[title=Bibliography]

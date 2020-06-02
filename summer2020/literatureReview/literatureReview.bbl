@@ -434,6 +434,260 @@
       \verb https://arc.aiaa.org/doi/abs/10.2514/6.2020-0684
       \endverb
     \endentry
+    \entry{10.1117/12.510945}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5fe9be8ca275cb2403c7da757696a190}{%
+           family={Pade},
+           familyi={P\bibinitperiod},
+           given={Offer},
+           giveni={O\bibinitperiod}}}%
+        {{hash=2f7657d3f303bec318c877924a5d551f}{%
+           family={Frumker},
+           familyi={F\bibinitperiod},
+           given={Evgeny},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1ea68722e00e1df30dbafba2bee91182}{%
+           family={Rojt},
+           familyi={R\bibinitperiod},
+           given={Paula\bibnamedelima Ines},
+           giveni={P\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d5afc6bb3da5c2f4eb7be7347d2619f3}{%
+           family={Gonglewski},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=9e0e71b49d8d54d23eb811a889f97fef}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {International Society for Optics}%
+        {Photonics}%
+      }
+      \list{publisher}{1}{%
+        {SPIE}%
+      }
+      \strng{namehash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{fullhash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{bibnamehash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{authorbibnamehash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{authornamehash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{authorfullhash}{1f8f9468e6f120d129b34440a9dca521}
+      \strng{editorbibnamehash}{8957255691936827a172d06fbc16be75}
+      \strng{editornamehash}{8957255691936827a172d06fbc16be75}
+      \strng{editorfullhash}{8957255691936827a172d06fbc16be75}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Optics in Atmospheric Propagation and Adaptive Systems VI}
+      \field{title}{{Optical distortions caused by propagation through turbulent shear layers}}
+      \field{volume}{5237}
+      \field{year}{2004}
+      \field{pages}{31\bibrangedash 38}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1117/12.510945
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1117/12.510945
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1117/12.510945
+      \endverb
+      \keyw{turbulence,propagation,shear-layer,atmosphere}
+    \endentry
+    \entry{doi:10.2514/1.A33122}{article}{}
+      \name{author}{6}{}{%
+        {{hash=4fb645e63b4170d117c294881ab42e06}{%
+           family={Kundrapu},
+           familyi={K\bibinitperiod},
+           given={Madhusudhan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=56f8ff51234a4cf746b8da7b17bce086}{%
+           family={Loverich},
+           familyi={L\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=437e74a5de98c745513ae2f5ef87efd2}{%
+           family={Beckwith},
+           familyi={B\bibinitperiod},
+           given={Kristian},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2fd927a5626355d62323d768180fd8ae}{%
+           family={Stoltz},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8175d0a1d74fc4cf6f95dcd55bbfcb85}{%
+           family={Shashurin},
+           familyi={S\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=41030820e6da8baf89f5c457a079fc11}{%
+           family={Keidar},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fac70454ddbb898d4e05e321820fdc9}
+      \strng{fullhash}{e03aa0e55e46ed9b83efda924cfc3e8f}
+      \strng{bibnamehash}{3fac70454ddbb898d4e05e321820fdc9}
+      \strng{authorbibnamehash}{3fac70454ddbb898d4e05e321820fdc9}
+      \strng{authornamehash}{3fac70454ddbb898d4e05e321820fdc9}
+      \strng{authorfullhash}{e03aa0e55e46ed9b83efda924cfc3e8f}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Spacecraft and Rockets}
+      \field{number}{3}
+      \field{title}{Modeling Radio Communication Blackout and Blackout Mitigation in Hypersonic Vehicles}
+      \field{volume}{52}
+      \field{year}{2015}
+      \field{pages}{853\bibrangedash 862}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.2514/1.A33122
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.2514/1.A33122
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2514/1.A33122
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2514/1.A33122
+      \endverb
+    \endentry
+    \entry{doi:10.2514/6.2008-1076}{inbook}{}
+      \name{author}{3}{}{%
+        {{hash=630c09c7091607e0467c6f7583152741}{%
+           family={Siegenthaler},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7e1d9c6c01462d191b53a981c26e5031}{%
+           family={Jumper},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=caf76c1b32eb107032b47fb169db4ed5}{%
+           family={Gordeyev},
+           familyi={G\bibinitperiod},
+           given={Stanislav},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3fc619de7e13b427382e0260fdc0a86}
+      \strng{fullhash}{f3fc619de7e13b427382e0260fdc0a86}
+      \strng{bibnamehash}{f3fc619de7e13b427382e0260fdc0a86}
+      \strng{authorbibnamehash}{f3fc619de7e13b427382e0260fdc0a86}
+      \strng{authornamehash}{f3fc619de7e13b427382e0260fdc0a86}
+      \strng{authorfullhash}{f3fc619de7e13b427382e0260fdc0a86}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{46th AIAA Aerospace Sciences Meeting and Exhibit}
+      \field{title}{Atmospheric Propagation vs. Aero-Optics}
+      \verb{doi}
+      \verb 10.2514/6.2008-1076
+      \endverb
+      \verb{eprint}
+      \verb https://arc.aiaa.org/doi/pdf/10.2514/6.2008-1076
+      \endverb
+      \verb{urlraw}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2008-1076
+      \endverb
+      \verb{url}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2008-1076
+      \endverb
+    \endentry
+    \entry{doi:10.2514/6.2012-2988}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=79312c25841a4f2341e462020d563806}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=44a453a69684789133e3b3393f75ef31}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hong},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4975c1548693ff8784de83625a08a99}
+      \strng{fullhash}{d4975c1548693ff8784de83625a08a99}
+      \strng{bibnamehash}{d4975c1548693ff8784de83625a08a99}
+      \strng{authorbibnamehash}{d4975c1548693ff8784de83625a08a99}
+      \strng{authornamehash}{d4975c1548693ff8784de83625a08a99}
+      \strng{authorfullhash}{d4975c1548693ff8784de83625a08a99}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{42nd AIAA Fluid Dynamics Conference and Exhibit}
+      \field{title}{Study on the Effect of Compressibility and Knudsen Number on Aero Optics in Supersonic/Hypersonic Flows}
+      \verb{doi}
+      \verb 10.2514/6.2012-2988
+      \endverb
+      \verb{eprint}
+      \verb https://arc.aiaa.org/doi/pdf/10.2514/6.2012-2988
+      \endverb
+      \verb{urlraw}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2012-2988
+      \endverb
+      \verb{url}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2012-2988
+      \endverb
+    \endentry
+    \entry{doi:10.2514/1.J057869}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e1526dafb3f8a9af781ad9558f82411c}{%
+           family={Mackey},
+           familyi={M\bibinitperiod},
+           given={Lauren\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6b2ba3b6ee3d0e6ef3618d245cf70daa}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Iain\bibnamedelima D.},
+           giveni={I\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ae3c4407a377f80234c4bcebe163a21}
+      \strng{fullhash}{1ae3c4407a377f80234c4bcebe163a21}
+      \strng{bibnamehash}{1ae3c4407a377f80234c4bcebe163a21}
+      \strng{authorbibnamehash}{1ae3c4407a377f80234c4bcebe163a21}
+      \strng{authornamehash}{1ae3c4407a377f80234c4bcebe163a21}
+      \strng{authorfullhash}{1ae3c4407a377f80234c4bcebe163a21}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AIAA Journal}
+      \field{number}{9}
+      \field{title}{Assessment of Hypersonic Flow Physics on Aero-Optics}
+      \field{volume}{57}
+      \field{year}{2019}
+      \field{pages}{3885\bibrangedash 3897}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.2514/1.J057869
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.2514/1.J057869
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2514/1.J057869
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2514/1.J057869
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

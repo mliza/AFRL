@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 MAY 2020 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  1 JUN 2020 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1606,41 +1606,62 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 122.
+(hyperref)                removing `\cite' on input line 123.
 
 [5]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 128
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 137.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 143.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 149.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 160.
+
+[6]
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 166
 .
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (3.97401pt too wide) in paragraph at lines 128--128
+Overfull \hbox (9.449pt too wide) in paragraph at lines 166--166
 []\OT1/lmr/m/n/10.95 Konstantinos Vo-giatzis et al. ``Hy-per-Code: A frame-work
  for high-order ac-cu-rate tur-bu-lent non-equilibrium
  []
 
-
+[7] 
 AED: lastpage setting LastPage
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  (./literatureReview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `literatureReview.out' has not changed.
-(rerunfilecheck)             Checksum: AE5020188AE08A9C89F571D8BC43BCAF;1037.
+(rerunfilecheck)             Checksum: 18ED7123786C6FB5CD966F3418489C32;1677.
 Package logreq Info: Writing requests to 'literatureReview.run.xml'.
 \openout1 = `literatureReview.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44344 strings out of 492616
- 899253 string characters out of 6129482
- 1458803 words of memory out of 5000000
- 47608 multiletter control sequences out of 15000+600000
+ 44375 strings out of 492616
+ 900136 string characters out of 6129482
+ 1462162 words of memory out of 5000000
+ 47627 multiletter control sequences out of 15000+600000
  576152 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,19n,101p,895b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,19n,101p,895b,1436s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/loca
 l/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/local/texlive/20
 19/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/
@@ -1662,10 +1683,10 @@ t/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on literatureReview.pdf (6 pages, 326718 bytes).
+Output written on literatureReview.pdf (8 pages, 335338 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

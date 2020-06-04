@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  2 JUN 2020 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  4 JUN 2020 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1620,23 +1620,23 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 163.
+(hyperref)                removing `\cite' on input line 166.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 169.
+(hyperref)                removing `\cite' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 174.
+(hyperref)                removing `\cite' on input line 177.
 
 [7]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 180
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 183
 .
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (9.449pt too wide) in paragraph at lines 180--180
+Overfull \hbox (9.449pt too wide) in paragraph at lines 183--183
 []\OT1/lmr/m/n/10.95 Konstantinos Vo-giatzis et al. ``Hy-per-Code: A frame-work
  for high-order ac-cu-rate tur-bu-lent non-equilibrium
  []
@@ -1644,11 +1644,11 @@ Overfull \hbox (9.449pt too wide) in paragraph at lines 180--180
 [8] 
 AED: lastpage setting LastPage
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
  (./literatureReview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
 Package rerunfilecheck Info: File `literatureReview.out' has not changed.
 (rerunfilecheck)             Checksum: 18ED7123786C6FB5CD966F3418489C32;1677.
 Package logreq Info: Writing requests to 'literatureReview.run.xml'.
@@ -1684,7 +1684,7 @@ t/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on literatureReview.pdf (9 pages, 338192 bytes).
+Output written on literatureReview.pdf (9 pages, 338506 bytes).
 PDF statistics:
  309 PDF objects out of 1000 (max. 8388607)
  253 compressed objects within 3 object streams

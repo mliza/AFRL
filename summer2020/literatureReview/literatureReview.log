@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  1 JUN 2020 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  2 JUN 2020 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1615,39 +1615,40 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 149.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 155.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 160.
+(hyperref)                removing `\cite' on input line 148.
 
 [6]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 166
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 163.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 169.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 174.
+
+[7]
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 180
 .
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (9.449pt too wide) in paragraph at lines 166--166
+Overfull \hbox (9.449pt too wide) in paragraph at lines 180--180
 []\OT1/lmr/m/n/10.95 Konstantinos Vo-giatzis et al. ``Hy-per-Code: A frame-work
  for high-order ac-cu-rate tur-bu-lent non-equilibrium
  []
 
-[7] 
+[8] 
 AED: lastpage setting LastPage
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
  (./literatureReview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `literatureReview.out' has not changed.
 (rerunfilecheck)             Checksum: 18ED7123786C6FB5CD966F3418489C32;1677.
 Package logreq Info: Writing requests to 'literatureReview.run.xml'.
@@ -1655,8 +1656,8 @@ Package logreq Info: Writing requests to 'literatureReview.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44375 strings out of 492616
- 900136 string characters out of 6129482
+ 44376 strings out of 492616
+ 900142 string characters out of 6129482
  1462162 words of memory out of 5000000
  47627 multiletter control sequences out of 15000+600000
  576152 words of font info for 64 fonts, out of 8000000 for 9000
@@ -1683,10 +1684,10 @@ t/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/lm/lmro10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on literatureReview.pdf (8 pages, 335338 bytes).
+Output written on literatureReview.pdf (9 pages, 338192 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
  261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

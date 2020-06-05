@@ -688,6 +688,130 @@
       \verb https://doi.org/10.2514/1.J057869
       \endverb
     \endentry
+    \entry{doi:10.1063/1.1705906}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ab4a1de5d363fb44935c62dfcca5e437}{%
+           family={Alpher},
+           familyi={A\bibinitperiod},
+           given={Ralph\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=481afb0d2d1833373a8fef3d64225c41}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Donald\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \strng{fullhash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \strng{bibnamehash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \strng{authorbibnamehash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \strng{authornamehash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \strng{authorfullhash}{f136d0d36ac2ff9b917f9a8437dffea0}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Physics of Fluids}
+      \field{number}{2}
+      \field{title}{Optical Refractivity of High‐Temperature Gases. I. Effects Resulting from Dissociation of Diatomic Gases}
+      \field{volume}{2}
+      \field{year}{1959}
+      \field{pages}{153\bibrangedash 161}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1063/1.1705906
+      \endverb
+      \verb{eprint}
+      \verb https://aip.scitation.org/doi/pdf/10.1063/1.1705906
+      \endverb
+      \verb{urlraw}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1705906
+      \endverb
+      \verb{url}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1705906
+      \endverb
+    \endentry
+    \entry{doi:10.1063/1.1692629}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5862b909e5773231ae82f1a0e5e896bc}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi H.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{5862b909e5773231ae82f1a0e5e896bc}
+      \strng{fullhash}{5862b909e5773231ae82f1a0e5e896bc}
+      \strng{bibnamehash}{5862b909e5773231ae82f1a0e5e896bc}
+      \strng{authorbibnamehash}{5862b909e5773231ae82f1a0e5e896bc}
+      \strng{authornamehash}{5862b909e5773231ae82f1a0e5e896bc}
+      \strng{authorfullhash}{5862b909e5773231ae82f1a0e5e896bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Physics of Fluids}
+      \field{number}{5}
+      \field{title}{Experimental Determination of the Gladstone‐Dale Constants for Dissociating Oxygen}
+      \field{volume}{12}
+      \field{year}{1969}
+      \field{pages}{I-57-I\bibrangedash 60}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1063/1.1692629
+      \endverb
+      \verb{eprint}
+      \verb https://aip.scitation.org/doi/pdf/10.1063/1.1692629
+      \endverb
+      \verb{urlraw}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1692629
+      \endverb
+      \verb{url}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1692629
+      \endverb
+    \endentry
+    \entry{doi:10.2514/6.2003-4252}{inbook}{}
+      \name{author}{3}{}{%
+        {{hash=e95a43d018ef8aa2d819862e482ef897}{%
+           family={Karl},
+           familyi={K\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7eb5ac85763cb309b4506ca0b49bbfcf}{%
+           family={Schramm},
+           familyi={S\bibinitperiod},
+           given={Jan\bibnamedelima Martinez},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=47e56ff0e1220ab897dbffc259028c2c}{%
+           family={Hannemann},
+           familyi={H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{730034873fa61e54adefd9337c91dc66}
+      \strng{fullhash}{730034873fa61e54adefd9337c91dc66}
+      \strng{bibnamehash}{730034873fa61e54adefd9337c91dc66}
+      \strng{authorbibnamehash}{730034873fa61e54adefd9337c91dc66}
+      \strng{authornamehash}{730034873fa61e54adefd9337c91dc66}
+      \strng{authorfullhash}{730034873fa61e54adefd9337c91dc66}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{33rd AIAA Fluid Dynamics Conference and Exhibit}
+      \field{title}{High Enthalpy Cylinder Flow in HEG: A Basis for CFD Validation}
+      \verb{doi}
+      \verb 10.2514/6.2003-4252
+      \endverb
+      \verb{eprint}
+      \verb https://arc.aiaa.org/doi/pdf/10.2514/6.2003-4252
+      \endverb
+      \verb{urlraw}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2003-4252
+      \endverb
+      \verb{url}
+      \verb https://arc.aiaa.org/doi/abs/10.2514/6.2003-4252
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

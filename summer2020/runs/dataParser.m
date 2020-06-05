@@ -14,12 +14,14 @@ function [dataOutStruct] = dataParser(filename)
     % Split the headers 
     headers = strsplit(headersOut, ' ');
     headers(end) = [];
-   % headers(1) = [];
+   % headers(1) = []; %uncomment me for convergenec.plt
+
+    [rowNaN colNaN] = find(isnan(inFile.data(:,6))); %find col where NaN starts 
 
     %Creates a data structure using header's names
     for i = 1:columns
         headerName = headers(i); 
-        dataOutStruct.(headerName) = [ numDataIn(:,i) ];
+        dataOutStruct.(headerName) = [ numDataIn(1:rowNaN(1)-1,i) ];
     end
 
 end

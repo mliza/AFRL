@@ -2008,6 +2008,9 @@
     <bcf:citekey order="11">doi:10.2514/6.2008-1076</bcf:citekey>
     <bcf:citekey order="12">doi:10.2514/6.2012-2988</bcf:citekey>
     <bcf:citekey order="13">doi:10.2514/1.J057869</bcf:citekey>
+    <bcf:citekey order="14">doi:10.1063/1.1705906</bcf:citekey>
+    <bcf:citekey order="15">doi:10.1063/1.1692629</bcf:citekey>
+    <bcf:citekey order="16">doi:10.2514/6.2003-4252</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

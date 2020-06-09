@@ -3,6 +3,7 @@ function [dataOutStruct] = dataParser(filename)
     inFile = importdata(filename);
     numDataIn = inFile.data; 
     [rows, columns] = size(numDataIn);
+    [rowNaN colNaN] = find(isnan(inFile.data(:,columns))); %find col where NaN starts 
 
     % Cleanout input data header  
     % This might need to be modify to work with other data files 
@@ -16,7 +17,6 @@ function [dataOutStruct] = dataParser(filename)
     headers(end) = [];
    % headers(1) = []; %uncomment me for convergenec.plt
 
-    [rowNaN colNaN] = find(isnan(inFile.data(:,6))); %find col where NaN starts 
 
     %Creates a data structure using header's names
     for i = 1:columns

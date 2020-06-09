@@ -1,15 +1,31 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'literatureReview.blg'
-[74] biber-darwin:315> INFO - === Thu Jun  4, 2020, 18:44:42
-[118] Biber.pm:371> INFO - Reading 'literatureReview.bcf'
-[318] Biber.pm:889> INFO - Found 16 citekeys in bib section 0
-[352] Biber.pm:4093> INFO - Processing section 0
-[380] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
-[382] bibtex.pm:1523> INFO - LaTeX decoding ...
-[466] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
-[846] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[846] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[847] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[847] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[889] bbl.pm:636> INFO - Writing 'literatureReview.bbl' with encoding 'UTF-8'
-[911] bbl.pm:739> INFO - Output to literatureReview.bbl
+[122] biber-darwin:315> INFO - === Tue Jun  9, 2020, 16:13:24
+[164] Biber.pm:371> INFO - Reading 'literatureReview.bcf'
+[346] Biber.pm:889> INFO - Found 18 citekeys in bib section 0
+[370] Biber.pm:4093> INFO - Processing section 0
+[383] Biber.pm:4254> INFO - Looking for bibtex format file '../chanl.bib' for section 0
+[390] bibtex.pm:1523> INFO - LaTeX decoding ...
+[600] bibtex.pm:1340> INFO - Found BibTeX data source '../chanl.bib'
+[630] Utils.pm:193> WARN - month field 'June' in entry 'tropina:plc:2018' is not an integer - this will probably not sort properly.
+[634] Utils.pm:193> WARN - month field 'September' in entry 'wyckhman:aiaa:2009' is not an integer - this will probably not sort properly.
+[647] Utils.pm:193> WARN - month field 'January' in entry 'vogiatzis:scitech:2020' is not an integer - this will probably not sort properly.
+[653] Utils.pm:193> WARN - month field 'July' in entry 'pazder:spie:2006' is not an integer - this will probably not sort properly.
+[659] Utils.pm:193> WARN - month field 'June' in entry 'vogiatzis:tp:2016' is not an integer - this will probably not sort properly.
+[673] Utils.pm:193> WARN - month field 'August' in entry 'vogiatzis:spie:2014' is not an integer - this will probably not sort properly.
+[678] Utils.pm:193> WARN - month field 'January' in entry 'gupta:scitech:2020' is not an integer - this will probably not sort properly.
+[689] Utils.pm:193> WARN - month field 'February' in entry 'pade:spie:2003' is not an integer - this will probably not sort properly.
+[699] Utils.pm:193> WARN - month field 'May' in entry 'kundrapu:jsr:2015' is not an integer - this will probably not sort properly.
+[704] Utils.pm:193> WARN - month field 'September' in entry 'mackey:aiaa:2019' is not an integer - this will probably not sort properly.
+[711] Utils.pm:193> WARN - month field 'December' in entry 'tropina:jop:2019' is not an integer - this will probably not sort properly.
+[717] Utils.pm:193> WARN - month field 'June' in entry 'karl:fdc:2003' is not an integer - this will probably not sort properly.
+[726] Utils.pm:193> WARN - month field 'March-April' in entry 'alpher:tpof:1959' is not an integer - this will probably not sort properly.
+[739] Utils.pm:193> WARN - month field 'January' in entry 'siegenthaler:aiaa:2008' is not an integer - this will probably not sort properly.
+[744] Utils.pm:193> WARN - month field 'June' in entry 'ren:fdc:2012' is not an integer - this will probably not sort properly.
+[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[771] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[771] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[788] bbl.pm:636> INFO - Writing 'literatureReview.bbl' with encoding 'UTF-8'
+[807] bbl.pm:739> INFO - Output to literatureReview.bbl
+[807] Biber.pm:110> INFO - WARNINGS: 15

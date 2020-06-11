@@ -1,3 +1,4 @@
+
 \input{../latexResources/homeworkTemplate}
 \input{../latexResources/mathMacros}
 \input{../latexResources/pictureMacros}
@@ -10,9 +11,10 @@
 \Header{\today}{Literature Review}{Martin E. Liza}
 \usepackage{multirow}
 
+
 \begin{document}
 % Weeks 1-2 
-\iffalse 
+\iftrue 
     \section{Physics and Computation of Aero-Optics \cite{wang:arofm:2012}}
         \begin{itemize} 
             \item The timescale for optical propagation is negligibly short relative to flow timescales, and hence optical popagation can be solved in a frozen flow field at each time instant. 
@@ -208,17 +210,48 @@
 \fi
 
 % Weeks 2-4
+\iftrue 
     \section{Atmospheric Propagation Vs. Aero-Optics \cite{siegenthaler:aiaa:2008}} 
         \begin{itemize} 
-            \item 
+            \item In the case of atmospheric propagation, the index of refraction variations are due to temperature fluctuations caused by very large scale (relative to the beam aperture) temperature gradients in a region of the atmosphere that itself is n shear and has turbulence scales that cascade from the largest scales down to sub aperture scales.
+            \item In the case of aero-optics, the index of refraction variations for weakly-compressible flows are caused by density fluctuations that form in and around the coherent structures in the turbulent flow. 
+            \item At the heart of the atmospheric propagation, a single parameter $\Sub{C}{n}^2$. This parameter describes not only the scale size of the aberrating index of refraction fluctuations, but also the magnitude of the aberration with them. 
+            \item In aero-optics the $\Sub{C}{n}^2$ parameter is irrelevant, because of the characterization of aero-optic turbulence since the range of scales over which aero-optic turbulence can be consider Kolmogorov places them below the scale sizes that are relevant to the optical problem.  
+            \item The Kolmogorov model of turbulence; is a statistical, incompressible model; which based largely on the idea of energy being transferred between various length scales in the flow. At the largest scales, persisting eddies act as the energy supply for the turbulent flow. At the small scales, viscous forces become dominant, and the kinetic energy in the flow is dissipated as heat. 
+            \item Kolmogorov proposed that in fully developed turbulence flow, the properties in the inertial range were only dependent upon the flux of energy though those scales. Note, Kolmogorov' turbulence model is assumed to be an incompressible flow.  
+            \item Variations in temperature and pressure of a gas or collection of gases will produce variations in density.
+            \item In air, for wavelengths in or near the visible range, the index of refraction can be approximated to be: $ dn = 7.77\times 10^{-7} \frac{P}{T}\Parenthesis{\frac{dP}{P} - \frac{dT}{T}} $
+            \item In the free atmosphere, pressure gradients severe enough to produce significant density variation on the length scale of most optical path diameters tend to disperse at sonic speeds and the small pressure fluctuations that are coupled to velocity variations in atmospheric turbulence tend to have a low order optical impact compared to the effect of temperature fluctuations.  
+            \item As light travels slower in areas with a higher index of refraction, the same absolute path length becomes effectively longer or shorter from an optical standpoint in regions of greater or lesser index of refraction.
+            \item The OPD can be scaled by the wavelength of light to indicate differences in phase over the recieving plane. These differences in phase produce differences in amplitude and intensity as a wave propagates.
+            \item Fried, assumed that if one was attempting to recover information from light received through an aperture, then there would be some signal modulated onto a carrier wave, such that the amplitude of the carrier would be much greater than the amplitude of the signal. 
+            \item Having an aperture larger than the Friend's parameter $\Parenthesis{\Sub{r}{0}}$, will not significantly improve the signal to noise ratio of a signal or resolution of an image. 
+            \item The Friend's parameter is physically defined as the size of an aperture over which the root-mean square phase variance is approximately $1\Units{radian}$.
+            \item The Greenwood frequency is commonly used as a guideline for the bandwidth required of a corrective system intended to deal with optical turbulence.
+            \item The assumptions of isotropy and homogeneity of the flow don't apply in aero-optics.
+            \item Experimental studies of transonic flow have shown that resulting flow structures are a source of optical aberrations.  
+            \item Studies have shown that in transonic shear layers, there are rolling vortices that make up flows containing significant wells of low pressure. These low pressure regions can produce significant optical distortions not predicted by models based solely on temperature differences.  
+            \item Shear layers are of particular interest in aero-optics as they may form over cavities or in any instance of separated flow. 
+            \item Aero-optic flows do not follow atmospheric flows' rules of scale, because they tend to have a characteristic length and associated frequency. This is because these flows are not in equilibrium state as is it assumed for Kolmogorov turbulence's model. 
+            \item A possible corrective filter with a transfer function that remove optical distortions can be derived from the Greenwood frequency. 
         \end{itemize}
-
 
     \section{Study on the Effect of Compressibility and Knudsen number on Aero Optics in Supersonic/Hypersonic Flows \cite{ren:fdc:2012}} 
         \begin{itemize} 
-            \item 
+            \item \textbf{Kn:} Knudsen number; is a dimensionless number defines as the ratio of the molecular mean free path length $\Parenthesis{\lambda}$ to a representative physical length $\Parenthesis{L}$. This ratio helps to determine where statistical mechanics or continuum mechanics formulation of fluid dynamics should be used to model a situation. If $Kn$ is $\geq 1$, then $\lambda \approx L$ and the continuum assumption of fluid mechanics is no longer a good approximation; hence, statistical methods should be use. $Kn = \frac{\lambda}{L}$
+            \item A smaller Knudsen number would lead to a larger optical distortion because the media was denser and larger strength per unit which will lead to a larger distortion. $\Sub{OPD}{RMS} \approx \Up{Kn}{-1}$.
+            \item Compressibility played an important role in optical distortion. For supersonic flows, optical distortion was lower at higher Mach number $\Parenthesis{\Sub{OPD}{RMS}\approx\Up{Ma}{-1}}$; and for hypersonic flows, optical distortion became more severe as Mach number increased $\Parenthesis{\Sub{OPD}{RMS}\approx Ma}$.
+            \item It was confirmed that shock wave regions contributed most to the distortion. Near wall flow regions contributed less than $10\%$ to the total distortion in supersonic flows; and in hypersonic flows the near wall flow regions contributed $40\%$ to the total distortion. 
+            \item The blurring due to a hypersonic flow, can lead to a decrease in the signal to noise ration and image degradation, consequently affecting the target's location. (Cohesive Reference Point CRP)     
+            \item Navier-Stokes equations might not be capable to resolve the physical process at order of magnitudes less than nano-meters$/$seconds and$/$or micro-meters$/$seconds. Thereby, a numerical method for Boltzmann equation becomes necessary to capture the physical phenomenon in the small scale. 
+            \item Flow fields were computing using Direct Simulation Monte Carlo (DSMC) and a new ray tracing technique was proposed to computer the phase difference from the index of refraction.  
+            \item The aero-optical analysis, a new ray tracing technique based on CFD meshes was proposed, and it was assumed that the grid resolution from the CFD simulation was considered to be an accurate representation of the aero-optical effects. 
+            \item OPD is also called the relative phase $\Parenthesis{\phi}$.  
+            \item The optically-active region in supersonic flows was larger than in hypersonic flows, because of larger compressibility.  
+            \item The aero-optical effects caused by boundary layers in hypersonic flows was more severe than in supersonic flows. 
         \end{itemize}
 
+\fi
 
 \newpage
 \printbibliography[title=Bibliography]

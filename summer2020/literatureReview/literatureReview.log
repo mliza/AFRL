@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  9 JUN 2020 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  10 JUN 2020 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1342,21 +1342,21 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 (./literatureReview.aux)
 \openout1 = `literatureReview.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 15.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1464,7 +1464,7 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks52
 )
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 13.
+(scrlayer)             \begin{document} on input line 15.
 
 
 Package scrlayer-scrpage Warning: Very small head height detected!
@@ -1478,9 +1478,9 @@ Package scrlayer-scrpage Warning: Very small head height detected!
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 13.
+(lastpage)             ! on input line 15.
 \AtBeginShipoutBox=\box80
-Package hyperref Info: Link coloring ON on input line 13.
+Package hyperref Info: Link coloring ON on input line 15.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1489,9 +1489,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count474
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./literatureReview.out) (./literatureReview.out)
 \@outlinefile=\write8
@@ -1515,60 +1515,53 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'literatureReview.bbl' found.
 
 (./literatureReview.bbl)
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 211.
+(hyperref)                removing `\cite' on input line 18.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 214.
-
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 20.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 214
-.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 20.
+
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 214.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\cite' on input line 217.
-
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 223.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 20.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 24.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 223
-.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 24.
+
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 223.
+(Font)              <10.95> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 223.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 223.
-LaTeX Font Info:    Try loading font information for U+msa on input line 223.
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 223.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esint on input line 223.
-
+LaTeX Font Info:    Try loading font information for U+esint on input line 24.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
@@ -1581,8 +1574,8 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=13.59999pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 2
-23.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
+1.
 
 
 Overfull \vbox (1.59999pt too high) has occurred while \output is active []
@@ -1591,19 +1584,79 @@ Overfull \vbox (1.59999pt too high) has occurred while \output is active []
 [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Overfull \hbox (9.449pt too wide) in paragraph at lines 224--224
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 44.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 58.
+
+[2]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 84.
+
+[3]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 95.
+
+[4]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 121.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 128.
+
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 142.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 153.
+
+[6]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 170.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 182.
+
+[7]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 214.
+
+[8] [9]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cite' on input line 239.
+
+[10]
+Overfull \hbox (9.449pt too wide) in paragraph at lines 257--257
 []\OT1/lmr/m/n/10.95 Konstantinos Vo-giatzis et al. ``Hy-per-Code: A frame-work
  for high-order ac-cu-rate tur-bu-lent non-equilibrium
  []
 
-[2] 
+[11] 
 AED: lastpage setting LastPage
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  (./literatureReview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 
 
 Package rerunfilecheck Warning: File `literatureReview.out' has changed.
@@ -1611,8 +1664,8 @@ Package rerunfilecheck Warning: File `literatureReview.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `literatureReview.out':
-(rerunfilecheck)             Before: 212ED5D5F2341F03BE3DFBFC9DCC00CD;1871
-(rerunfilecheck)             After:  06533FB7D73FB02DB284595A3FD8A4CB;248.
+(rerunfilecheck)             Before: EBF0C382466BC6A87E16741A421EB7A4;151
+(rerunfilecheck)             After:  212ED5D5F2341F03BE3DFBFC9DCC00CD;1871.
 
 LaTeX Warning: There were undefined references.
 
@@ -1629,67 +1682,36 @@ Package logreq Info: Writing requests to 'literatureReview.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44387 strings out of 492616
- 900359 string characters out of 6129482
- 1458024 words of memory out of 5000000
- 47638 multiletter control sequences out of 15000+600000
- 570147 words of font info for 61 fonts, out of 8000000 for 9000
+ 44388 strings out of 492616
+ 900344 string characters out of 6129482
+ 1458304 words of memory out of 5000000
+ 47630 multiletter control sequences out of 15000+600000
+ 573093 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,20n,101p,895b,1426s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.10} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.15} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.14} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.13} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.12} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.11} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.8} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/te
-xlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/lm/lmbxo10.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/public/lm/lmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
-/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.
-pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on literatureReview.pdf (3 pages, 167495 bytes).
+ 65i,19n,101p,895b,1426s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/esint-type1/esint10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/lm/lmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
+ic/lm/lmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx
+o10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/l
+m/lmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/lm/lmsy8.pfb>
+Output written on literatureReview.pdf (12 pages, 313693 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 249 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

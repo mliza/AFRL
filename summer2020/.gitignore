@@ -8,3 +8,8 @@ auto
 *.out
 *.pdf
 *.synctex.gz
+.DS_Store
+Icon?
+test.e*
+test.o*
+

@@ -1,12 +1,9 @@
 % Import Data
 dataIn = dataParser('output/output.plt');
+[ GDconst, neutralGDconst, cationGDconst ] = constantsGD(); 
 
-% Specie's Gladsone-Dale Constants
-kO  = 2.04E-4; 
-kO2 = 1.93E-4;
-kN  = 3.10E-4;
-kNO = 2.21E-4; 
-kN2 = 2.40E-4;
+% Calculate Gladstone Constants using table 2a 
+
 
 % Calculate total Gladsone-Dale Constant and index of refraction 
 % Modify this without using loops 

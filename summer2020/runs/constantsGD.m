@@ -1,3 +1,21 @@
+%{ 
+   Date:    06/12/2020
+   Author:  Martin E. Liza
+   File:    constantsGD.m
+   Detail:  It returns the neutral Gladstone-Dale constants from papers and 
+            calculates the neutral and ionized GD constants for N2, N, O2, O 
+            using polarizability constants. The GD constants are returned as 
+            three different structures with units of [m^3/kg].
+
+   Ex.      [ GDconstSI, nuetralGDconstSI, ionGDConstSi ] = constantsGD()
+
+   Author              Date            Revision
+   ---------------------------------------------------
+   Martin E. Liza      06/12/2020      Initial Version
+
+%}
+
+
 clear; clc;
 %function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
     

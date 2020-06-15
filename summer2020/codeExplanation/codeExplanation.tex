@@ -1,0 +1,37 @@
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/templates/homeworkTemplate}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/equationMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/mathMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/pictureMacros}
+\Header{\today}{code Explanation}{Martin E. Liza}
+
+\begin{document}
+    \section{\bf{\Large{constantsGD.m}}}
+        \subsection*{Variables:}
+            \begin{itemize}
+                \item $ \Sub{\epsilon}{0}:\text{ vacuum permittivity}\UnitsFrac{A^2S^4}{m^3kg} $ 
+                \item $ \Sub{N}{A}:\text{ Avogadro's number}\UnitsFrac{1}{mol} $
+                \item $ \Sub{M}{i}:\text{ molar mass of specie }i\UnitsFrac{g}{mol} $
+                \item $ \Sub{A}{i}: \text{ molar refractivity of specie }i\text{ in GS units}\UnitsFrac{cm^3}{mol} $ 
+                \item $ \UpSub{\alpha}{i}{vol}:\text{ polarizability volume of specie }i\text{ in CGS units}\Units{cm^3} $
+                \item $ \Sub{\alpha}{i}:\text{ polarizability of specie }i\text{ in SI units}\UnitsFrac{A^2s^4}{kg} $
+                \item $ \Sub{R}{GD}:\text{ Gladstone-Dale constant}\UnitsFrac{m^3}{kg} $
+                \item $ \Up{\alpha}{spec}:\text{ specific polarizability}\UnitsFrac{A^2s^4}{m^3kg^2} $
+            \end{itemize}
+        
+        \subsection{Calculating the Gladstone-Dale constant $\Parenthesis{\Sub{R}{GD}}$ from the polarizability volume $\Parenthesis{\Up{\alpha}{vol}}$:}
+            \indent From \href{https://en.wikipedia.org/wiki/Polarizability}{wikiPolarizability}, it was found the conversion factor from the polarizability volume in CGS units to polarizability ins SI units, to be given by equation \eqref{cgsToSI}. 
+            \begin{equation}\label{cgsToSI}
+                \alpha = 4\pi\Sub{\epsilon}{0}\Up{\alpha}{vol}\times10^{-6}\UnitsFrac{A^2s^4}{kg} 
+            \end{equation}
+            \indent The molar refractivity is given by equation \eqref{molarRefractivity} 
+            \begin{equation}\label{molarRefractivity}
+                A = \frac{4\pi}{3}\Sub{N}{A}\Up{\alpha}{vol}\UnitsFrac{cm^3}{mol} 
+            \end{equation}
+            \indent The molar refractivity $\Parenthesis{A}$ in CGS units, can be converted to SI units, using equation \eqref{cgsToSI}
+            $$ \therefore \Up{A}{SI} = 4\pi\Sub{\epsilon}{0}A\times 10^{-6} $$
+            \indent The specific polarizability is given by \eqref{specPolarizability}
+            \begin{equation}\label{specPolarizability}
+                    \UpSub{\alpha}{i}{spec} = \frac{A}{\Sub{M}{i}}  
+            \end{equation}
+
+\end{document}

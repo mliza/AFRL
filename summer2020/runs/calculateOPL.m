@@ -1,9 +1,21 @@
+%{ 
+   Date:    06/04/2020
+   Author:  Martin E. Liza
+   File:    calculateOPL.m
+   Detail:  calculates the OPL using the dataParser.m, and the outputs from 
+            contantsGD.m
+
+   Ex.     calculateOPL 
+
+   Author              Date            Revision
+   ---------------------------------------------------
+   Martin E. Liza      06/04/2020      Initial Version
+
+%}
+
 % Import Data
 dataIn = dataParser('output/output.plt');
-[ GDconst, neutralGDconst, cationGDconst ] = constantsGD(); 
-
-% Calculate Gladstone Constants using table 2a 
-
+[ GDconstSI, neutralGDconstSI, cationGDconstSI ] = constantsGD(); 
 
 % Calculate total Gladsone-Dale Constant and index of refraction 
 % Modify this without using loops 

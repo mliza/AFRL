@@ -1,3 +1,18 @@
+%{ 
+   Date:    06/03/2020
+   Author:  Martin E. Liza
+   File:    dataParser.m
+   Detail:  It parsers the data from LeMaNs output files, and
+            returns the data as a structure. 
+
+   Ex.      [ dataOutStruct ] = dataParser('fileName.plt') 
+
+   Author              Date            Revision
+   ---------------------------------------------------
+   Martin E. Liza      06/03/2020      Initial Version
+
+%}
+
 function [dataOutStruct] = dataParser(filename)
     
     inFile = importdata(filename);

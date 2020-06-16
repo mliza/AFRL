@@ -10,7 +10,7 @@
             \begin{itemize}
                 \item $ \Sub{\epsilon}{0}:\text{ vacuum permittivity}\UnitsFrac{A^2S^4}{m^3kg} $ 
                 \item $ \Sub{N}{A}:\text{ Avogadro's number}\UnitsFrac{1}{mol} $
-                \item $ \Sub{M}{i}:\text{ molar mass of specie }i\UnitsFrac{g}{mol} $
+                \item $ \Sub{M}{i}:\text{ molar mass of specie }i\UnitsFrac{kg}{mol} $
                 \item $ \Sub{A}{i}: \text{ molar refractivity of specie }i\text{ in GS units}\UnitsFrac{cm^3}{mol} $ 
                 \item $ \UpSub{\alpha}{i}{vol}:\text{ polarizability volume of specie }i\text{ in CGS units}\Units{cm^3} $
                 \item $ \Sub{\alpha}{i}:\text{ polarizability of specie }i\text{ in SI units}\UnitsFrac{A^2s^4}{kg} $
@@ -28,10 +28,10 @@
                 A = \frac{4\pi}{3}\Sub{N}{A}\Up{\alpha}{vol}\UnitsFrac{cm^3}{mol} 
             \end{equation}
             \indent The molar refractivity $\Parenthesis{A}$ in CGS units, can be converted to SI units, using equation \eqref{cgsToSI}
-            $$ \therefore \Up{A}{SI} = 4\pi\Sub{\epsilon}{0}A\times 10^{-6} $$
+            $$ \therefore \Up{A}{SI} = 4\pi\Sub{\epsilon}{0}A\times 10^{-6}\UnitsFrac{A^2s^4}{kg\,mol} $$
             \indent The specific polarizability is given by \eqref{specPolarizability}
             \begin{equation}\label{specPolarizability}
-                    \UpSub{\alpha}{i}{spec} = \frac{A}{\Sub{M}{i}}  
+                \UpSub{\alpha}{i}{spec} = \frac{\Up{A}{SI}}{\Sub{M}{i}}\UnitsFrac{A^2s^4}{kg^2}
             \end{equation}
 
 \end{document}

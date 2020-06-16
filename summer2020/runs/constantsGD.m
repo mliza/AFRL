@@ -61,8 +61,6 @@ clear; clc;
     fieldNames = fieldnames(GDconstSI);  
     for i = 1:length(fieldNames)
         fieldName = fieldNames{i};
-        %% DELETE ME WHEN DONE 
-        polNeutralTesting.(fieldName) = GDconstSI.(fieldName) * 2 * vacPermittivitySI; 
         
         % Calculate molar polarizability in [cm^3/moles]
         molarNeutralPolCGS.(fieldName) = neutralPolCGS.(fieldName) * molarRefractConst;   
@@ -72,13 +70,21 @@ clear; clc;
         molarNeutralPolSI.(fieldName) = molarNeutralPolCGS.(fieldName) * cgsToSI;
         molarIonPolSI.(fieldName)     = molarIonPolCGS.(fieldName) * cgsToSI;
 
+        % Calculate specific polarizability  
+        %{
+        specificNeutralPolSI.(fieldName) = molarNeutralPolSI.(fieldName) / ... 
+                                           attWeightSI.(fieldName);  
+        specificIonPolSI.(fieldName)     = molarIonPolSI.(fieldName) / ...
+                                           attWeightSI.(fieldName);
+        %}
+        specificNeutralPolSI.(fieldName) = molarNeutralPolSI.(fieldName) / 0.1;  
+        specificIonPolSI.(fieldName)     = molarIonPolSI.(fieldName) /0.1;
+
         % Calculate Gladstone-Dale constant in [m^3/kg]
-        neutralGDconstSI.(fieldName)  = molarNeutralPolSI.(fieldName) / ... 
-                                        (attWeightSI.(fieldName) * 2 * ... 
-                                         vacPermittivitySI);
-        ionGDconstSI.(fieldName)      = molarIonPolSI.(fieldName) / ... 
-                                        (attWeightSI.(fieldName) * 2 * ...
-                                         vacPermittivitySI);
+        neutralGDconstSI.(fieldName)  = specificNeutralPolSI.(fieldName) / ...
+                                        (2 * vacPermittivitySI); 
+        ionGDconstSI.(fieldName)      = specificIonPolSI.(fieldName) / ... 
+                                        (2 * vacPermittivitySI);
     end
     clear i fieldName fieldNames;  
     who 

@@ -14,7 +14,7 @@
 
 \begin{document}
 % Weeks 1-2 
-\iftrue 
+\iffalse
     \section{Physics and Computation of Aero-Optics \cite{wang:arofm:2012}}
         \begin{itemize} 
             \item The timescale for optical propagation is negligibly short relative to flow timescales, and hence optical popagation can be solved in a frozen flow field at each time instant. 
@@ -210,7 +210,7 @@
 \fi
 
 % Weeks 2-4
-\iftrue 
+\iffalse 
     \section{Atmospheric Propagation Vs. Aero-Optics \cite{siegenthaler:aiaa:2008}} 
         \begin{itemize} 
             \item In the case of atmospheric propagation, the index of refraction variations are due to temperature fluctuations caused by very large scale (relative to the beam aperture) temperature gradients in a region of the atmosphere that itself is n shear and has turbulence scales that cascade from the largest scales down to sub aperture scales.
@@ -252,6 +252,21 @@
         \end{itemize}
 
 \fi
+
+    \section{Molecular Polarizability - an Introduction}
+        \begin{itemize}
+            \item When a beam of light is incident on a transparent material medium of refractive index different from that of its surroundings, the medium gets polarized.
+            \item If a light wave of electric intensity $\vec{E}$ goes through a molecule in the medium, it induces an optic moment in the molecule. The molecule is said to be polarized.
+            \item Theoretically; therefore, polarizability should be a function of the incident light frequency. 
+            \item $\alpha$ can be regarded as a constant; unless, when measuring $n$.
+            \item $\bm{P} = \alpha\bm{E}$, $\bm{P}$ is the dipole moment, $\bm{E}$ is the electric field, $\alpha$ is the polarizability of the molecule.  
+            \item In isotropic materials $\alpha$ can be treated as a scalar of constant magnitude. 
+            \item If the material is anisotropic, the polarizability acquires directional property. 
+            \item For optically inactive molecules, $\alpha$ is a symmetrical tensor.
+            \item An optically active molecule, rotates the plane of polarization after it goes through the molecule. Dextorotatory component rotates the light clockwise, and Levorotatory components rotates the light counterclockwise. 
+            \item The mean molecular polarizability is given by: $\alpha = \frac{2}{3}\Parenthesis{\Sub{b}{L} + \Sub{b}{T} + \Sub{b}{V}}$. Where $\Sub{b}{L}$ is the longitudinal link polarizability, $\Sub{b}{T}$ is the link polarizability in the plane of the molecule or group containing the link and at right angles to it and $\Sub{b}{V}$ is the one normal to the plane.
+            \item Individual chemical bonds can be associated with polarizability components along their lengths.
+        \end{itemize}
 
 \newpage
 \printbibliography[title=Bibliography]

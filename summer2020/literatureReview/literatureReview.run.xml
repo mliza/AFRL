@@ -79,7 +79,7 @@
       <file>literatureReview.bcf</file>
     </requires>
     <requires type="editable">
-      <file>../chanl.bib</file>
+      <file>../../../../CHANL/GroupBibFile/chanl.bib</file>
     </requires>
   </external>
 </requests>

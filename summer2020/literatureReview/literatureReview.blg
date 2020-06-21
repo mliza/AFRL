@@ -1,31 +1,31 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'literatureReview.blg'
-[122] biber-darwin:315> INFO - === Tue Jun  9, 2020, 16:13:24
-[164] Biber.pm:371> INFO - Reading 'literatureReview.bcf'
-[346] Biber.pm:889> INFO - Found 18 citekeys in bib section 0
-[370] Biber.pm:4093> INFO - Processing section 0
-[383] Biber.pm:4254> INFO - Looking for bibtex format file '../chanl.bib' for section 0
-[390] bibtex.pm:1523> INFO - LaTeX decoding ...
-[600] bibtex.pm:1340> INFO - Found BibTeX data source '../chanl.bib'
-[630] Utils.pm:193> WARN - month field 'June' in entry 'tropina:plc:2018' is not an integer - this will probably not sort properly.
-[634] Utils.pm:193> WARN - month field 'September' in entry 'wyckhman:aiaa:2009' is not an integer - this will probably not sort properly.
-[647] Utils.pm:193> WARN - month field 'January' in entry 'vogiatzis:scitech:2020' is not an integer - this will probably not sort properly.
-[653] Utils.pm:193> WARN - month field 'July' in entry 'pazder:spie:2006' is not an integer - this will probably not sort properly.
-[659] Utils.pm:193> WARN - month field 'June' in entry 'vogiatzis:tp:2016' is not an integer - this will probably not sort properly.
-[673] Utils.pm:193> WARN - month field 'August' in entry 'vogiatzis:spie:2014' is not an integer - this will probably not sort properly.
-[678] Utils.pm:193> WARN - month field 'January' in entry 'gupta:scitech:2020' is not an integer - this will probably not sort properly.
-[689] Utils.pm:193> WARN - month field 'February' in entry 'pade:spie:2003' is not an integer - this will probably not sort properly.
-[699] Utils.pm:193> WARN - month field 'May' in entry 'kundrapu:jsr:2015' is not an integer - this will probably not sort properly.
-[704] Utils.pm:193> WARN - month field 'September' in entry 'mackey:aiaa:2019' is not an integer - this will probably not sort properly.
-[711] Utils.pm:193> WARN - month field 'December' in entry 'tropina:jop:2019' is not an integer - this will probably not sort properly.
-[717] Utils.pm:193> WARN - month field 'June' in entry 'karl:fdc:2003' is not an integer - this will probably not sort properly.
-[726] Utils.pm:193> WARN - month field 'March-April' in entry 'alpher:tpof:1959' is not an integer - this will probably not sort properly.
-[739] Utils.pm:193> WARN - month field 'January' in entry 'siegenthaler:aiaa:2008' is not an integer - this will probably not sort properly.
-[744] Utils.pm:193> WARN - month field 'June' in entry 'ren:fdc:2012' is not an integer - this will probably not sort properly.
-[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[771] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[771] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[771] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[788] bbl.pm:636> INFO - Writing 'literatureReview.bbl' with encoding 'UTF-8'
-[807] bbl.pm:739> INFO - Output to literatureReview.bbl
-[807] Biber.pm:110> INFO - WARNINGS: 15
+[44] biber-darwin:315> INFO - === Wed Jun 17, 2020, 10:54:43
+[66] Biber.pm:371> INFO - Reading 'literatureReview.bcf'
+[165] Biber.pm:889> INFO - Found 19 citekeys in bib section 0
+[178] Biber.pm:4093> INFO - Processing section 0
+[189] Biber.pm:4254> INFO - Looking for bibtex format file '../../../../CHANL/GroupBibFile/chanl.bib' for section 0
+[194] bibtex.pm:1523> INFO - LaTeX decoding ...
+[376] bibtex.pm:1340> INFO - Found BibTeX data source '../../../../CHANL/GroupBibFile/chanl.bib'
+[402] Utils.pm:193> WARN - month field 'June' in entry 'tropina:plc:2018' is not an integer - this will probably not sort properly.
+[409] Utils.pm:193> WARN - month field 'September' in entry 'wyckhman:aiaa:2009' is not an integer - this will probably not sort properly.
+[419] Utils.pm:193> WARN - month field 'January' in entry 'vogiatzis:scitech:2020' is not an integer - this will probably not sort properly.
+[425] Utils.pm:193> WARN - month field 'July' in entry 'pazder:spie:2006' is not an integer - this will probably not sort properly.
+[431] Utils.pm:193> WARN - month field 'June' in entry 'vogiatzis:tp:2016' is not an integer - this will probably not sort properly.
+[444] Utils.pm:193> WARN - month field 'August' in entry 'vogiatzis:spie:2014' is not an integer - this will probably not sort properly.
+[449] Utils.pm:193> WARN - month field 'January' in entry 'gupta:scitech:2020' is not an integer - this will probably not sort properly.
+[458] Utils.pm:193> WARN - month field 'February' in entry 'pade:spie:2003' is not an integer - this will probably not sort properly.
+[467] Utils.pm:193> WARN - month field 'May' in entry 'kundrapu:jsr:2015' is not an integer - this will probably not sort properly.
+[471] Utils.pm:193> WARN - month field 'September' in entry 'mackey:aiaa:2019' is not an integer - this will probably not sort properly.
+[478] Utils.pm:193> WARN - month field 'December' in entry 'tropina:jop:2019' is not an integer - this will probably not sort properly.
+[484] Utils.pm:193> WARN - month field 'June' in entry 'karl:fdc:2003' is not an integer - this will probably not sort properly.
+[491] Utils.pm:193> WARN - month field 'March-April' in entry 'alpher:tpof:1959' is not an integer - this will probably not sort properly.
+[503] Utils.pm:193> WARN - month field 'January' in entry 'siegenthaler:aiaa:2008' is not an integer - this will probably not sort properly.
+[511] Utils.pm:193> WARN - month field 'June' in entry 'ren:fdc:2012' is not an integer - this will probably not sort properly.
+[542] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[542] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[542] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[542] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[555] bbl.pm:636> INFO - Writing 'literatureReview.bbl' with encoding 'UTF-8'
+[563] bbl.pm:739> INFO - Output to literatureReview.bbl
+[563] Biber.pm:110> INFO - WARNINGS: 15

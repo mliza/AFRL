@@ -1,5 +1,5 @@
 %{ 
-   Date:    06/12/2020
+   Date:    07/12/2020
    Author:  Martin E. Liza
    File:    constantsGD.m
    Detail:  It returns the neutral Gladstone-Dale constants from papers and 
@@ -11,12 +11,11 @@
 
    Author              Date            Revision
    ---------------------------------------------------
-   Martin E. Liza      06/12/2020      Initial Version
+   Martin E. Liza      07/12/2020      Initial Version
 
 %}
 
-
-clear; clc;
+%clear; clc;
 %function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
     
     % Physical Constants 
@@ -71,14 +70,10 @@ clear; clc;
         molarIonPolSI.(fieldName)     = molarIonPolCGS.(fieldName) * cgsToSI;
 
         % Calculate specific polarizability  
-        %{
         specificNeutralPolSI.(fieldName) = molarNeutralPolSI.(fieldName) / ... 
                                            attWeightSI.(fieldName);  
         specificIonPolSI.(fieldName)     = molarIonPolSI.(fieldName) / ...
                                            attWeightSI.(fieldName);
-        %}
-        specificNeutralPolSI.(fieldName) = molarNeutralPolSI.(fieldName) / 0.1;  
-        specificIonPolSI.(fieldName)     = molarIonPolSI.(fieldName) /0.1;
 
         % Calculate Gladstone-Dale constant in [m^3/kg]
         neutralGDconstSI.(fieldName)  = specificNeutralPolSI.(fieldName) / ...

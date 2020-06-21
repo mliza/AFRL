@@ -81,7 +81,7 @@
         {Atlanta, Georgia}%
       }
       \list{publisher}{1}{%
-        {AIAA Paper 2018-3904}%
+        {AIAA 2018-3904}%
       }
       \strng{namehash}{0d976ca1731aaad2ec0861b1af88cddb}
       \strng{fullhash}{88ee456bc71489ba2ecb004b9e0935a1}
@@ -245,7 +245,7 @@
         {Washington, D.C.}%
       }
       \list{publisher}{1}{%
-        {AIAA Paper 2016-4317}%
+        {AIAA 2016-4317}%
       }
       \strng{namehash}{e9cabea974e9c16e3e4782d86acea219}
       \strng{fullhash}{e9cabea974e9c16e3e4782d86acea219}
@@ -356,7 +356,7 @@
         {Orlando, FL}%
       }
       \list{publisher}{1}{%
-        {AIAA Paper 2020-0684}%
+        {AIAA 2020-0684}%
       }
       \strng{namehash}{195f3ced62888e20d02b252f0e8a3d34}
       \strng{fullhash}{195f3ced62888e20d02b252f0e8a3d34}
@@ -583,7 +583,7 @@
         {Orlando, FL}%
       }
       \list{publisher}{1}{%
-        {AIAA Paper 2003-4252}%
+        {AIAA 2003-4252}%
       }
       \strng{namehash}{730034873fa61e54adefd9337c91dc66}
       \strng{fullhash}{730034873fa61e54adefd9337c91dc66}
@@ -755,7 +755,7 @@
         {New Orleans, Louisiana}%
       }
       \list{publisher}{1}{%
-        {AIAA Paper 2012-2988}%
+        {AIAA 2012-2988}%
       }
       \strng{namehash}{d4975c1548693ff8784de83625a08a99}
       \strng{fullhash}{d4975c1548693ff8784de83625a08a99}
@@ -771,6 +771,37 @@
       \field{month}{6}
       \field{title}{Study on the Effect of Compressibility and Knudsen Number on Aero Optics in Supersonic/Hypersonic Flows}
       \field{year}{2012}
+    \endentry
+    \entry{jumper:arofm:2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=72463523c9f4cc659e34985c5061c6c1}{%
+           family={Jumper},
+           familyi={J\bibinitperiod},
+           given={Eric\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=caf76c1b32eb107032b47fb169db4ed5}{%
+           family={Gordeyev},
+           familyi={G\bibinitperiod},
+           given={Stanislav},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{afc9720b36467d65826d14c732b1843b}
+      \strng{fullhash}{afc9720b36467d65826d14c732b1843b}
+      \strng{bibnamehash}{afc9720b36467d65826d14c732b1843b}
+      \strng{authorbibnamehash}{afc9720b36467d65826d14c732b1843b}
+      \strng{authornamehash}{afc9720b36467d65826d14c732b1843b}
+      \strng{authorfullhash}{afc9720b36467d65826d14c732b1843b}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Fluid Mechanics}
+      \field{number}{1}
+      \field{title}{Physics and Measurement of Aero-Optical Efects: Past and Present}
+      \field{volume}{49}
+      \field{year}{2017}
+      \field{pages}{419\bibrangedash 441}
+      \range{pages}{23}
     \endentry
   \enddatalist
 \endrefsection

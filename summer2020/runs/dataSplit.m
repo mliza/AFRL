@@ -1,21 +1,19 @@
 %{ 
-   Date:    06/20/2020
+   Date:    06/22/2020
    Author:  Martin E. Liza
    File:    dataSplit.m
-   Detail:  It parsers the data from LeMaNs output files, as a 
-            matrix instead of vectos  
+   Detail:  Creates a blue print that allows to split the structure 
+            of vectors into a structure of matrices  
 
-   Ex.      [ dataOut ] = dataSplit('fileName.plt') 
+   Ex.      [ keyMatrixX, keyMatrixY ] = dataSplit('fileName.plt') 
 
    Author              Date            Revision
-   -------------------------------------------------------------------
+   ---------------------------------------------------
    Martin E. Liza      06/20/2020      Initial version
 
 %}
 
-
-function [ keyMatrixIndxX, keyMatrixIndxY ] = dataSplit(dataStruct)
-    dataIn = dataStruct;
+function [ keyMatrixIndxX, keyMatrixIndxY ] = dataSplit(dataIn)
 
     % Find the indices where, yAxis=0 and xAxis=0
     [ rowIndxX0 ] = find( dataIn.Y == min(dataIn.Y) ); 
@@ -40,20 +38,21 @@ function [ keyMatrixIndxX, keyMatrixIndxY ] = dataSplit(dataStruct)
         keyMatrixIndxY(i,:) = keyVector(1:yGridLim); 
     end
 
-
     % Creates the index combination to re arrange the data on Y 
     for i = 1:yLimVec
         lookUpXindx(i) = dataIn.X(rowIndxX0(i));
         keyVector = find( dataIn.X == lookUpXindx(i) );  
         keyMatrixIndxX(:,i) = keyVector(1:xGridLim); 
     end
-    %Flip the first column with second  
+
+    % Flip the first column with second column
     temp = keyMatrixIndxX(:,1);
     keyMatrixIndxX(:,1) = keyMatrixIndxX(:,2); 
     keyMatrixIndxX(:,2) = temp; 
 
-    %Flip the first column with second  
+    % Flip the first column with second column for the first row element  
     temp = keyMatrixIndxX(2,1);
     keyMatrixIndxX(2,1) = keyMatrixIndxX(1,1); 
     keyMatrixIndxX(1,1) = temp; 
-end
+
+end %end function dataSplit

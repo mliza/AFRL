@@ -1,9 +1,9 @@
 %{ 
-   Date:    06/16/2020
+   Date:    06/22/2020
    Author:  Martin E. Liza
    File:    calculateOPL.m
-   Detail:  calculates the OPL using the dataParser.m, and the outputs from 
-            contantsGD.m
+   Detail:  calculates N, OPL and OPD using the 
+            dataParser.m, and the outputs from contantsGD.m
 
    Ex.     calculateOPL 
 
@@ -15,8 +15,6 @@
    Martin E. Liza      06/21/2020      Revised the script to work with 
                                        multiple dimension structures, 
                                        implemented OPL and OPD.
-                                       
-
 %}
 
 clear all; close all; clc; 
@@ -54,7 +52,8 @@ for n = 1:length(nFieldName)
         OPD.(headerName) = OPL.(headerName) - mean(OPL.(headerName));
     end
 end
-% Plot index of refraction 
+
+% Plot OPD  
 figure 
 for i = 1:length(nFieldName)
     nIndx = nFieldName{i}; 
@@ -63,6 +62,6 @@ for i = 1:length(nFieldName)
 end 
 legend(nFieldName);
 xlabel('distance-X [m]');
-ylabel('OPD [ ]');
+ylabel('OPD [m]');
 hold off
 

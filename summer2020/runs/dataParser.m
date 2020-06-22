@@ -1,9 +1,10 @@
 %{ 
-   Date:    06/03/2020
+   Date:    06/22/2020
    Author:  Martin E. Liza
    File:    dataParser.m
-   Detail:  It parsers the data from LeMaNs output files, and
-            returns the data as a structure. 
+   Detail:  Parsers the data from LeMaNs output files, and
+            returns the data as a structure of matrices. Uses the 
+            helper sript, dataSplit.m.
 
    Ex.      [ dataOutStruct ] = dataParser('fileName.plt') 
 
@@ -13,8 +14,6 @@
    Martin E. Liza      06/18/2020      Added flags to allow output.plt 
                                        and convergence.plt to work 
    Martin E. Liza      06/20/2020      Added the helper function (dataSplit.m) 
-                                       that splits the output data as matrices 
-
 %}
 
 function [dataOut] = dataParser(filename)
@@ -24,12 +23,11 @@ function [dataOut] = dataParser(filename)
     [rows, columns] = size(numDataIn);
     [rowNaN colNaN] = find(isnan(inFile.data(:,columns))); %find col where NaN starts 
 
-    % Cleanout input data header 
-    % This might need to be modify to work with other data files 
+    % Clean out input data header 
     % Removes the words VARIABLES and = from data file 
     headersIn = erase( convertCharsToStrings(inFile.textdata{1}), "VARIABLES" ); 
     headersIn = erase( headersIn, "=" );
-    % Remodes the double quotes 
+    % Removes the double quotes 
     headersOut = strrep(headersIn, '"', '');
     % Split the headers 
     headers = strsplit(headersOut, ' ');
@@ -55,11 +53,12 @@ function [dataOut] = dataParser(filename)
 
     end
 
-    %Call helper Function 
+    % Calls helper function 
     [ keyMatrixX, keyMatrixY ] = dataSplit(dataOutStruct);
     [ keyMatrixRow, keyMatrixCol ] = size(keyMatrixX);
 
-    % Split the vector data to structure data using the keyMatrix 
+    % Rearrange the vector structure to a matrix structure 
+    % using keyMatrix from the helper Function  
     for n = 1:columns 
         headerName = headers(n); 
         dataStructVec = dataOutStruct.(headerName);
@@ -70,6 +69,6 @@ function [dataOut] = dataParser(filename)
         end
     end
 
-end
+end % end function dataParser()
 
 

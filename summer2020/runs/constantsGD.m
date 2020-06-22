@@ -1,5 +1,5 @@
 %{ 
-   Date:    06/12/2020
+   Date:    06/22/2020
    Author:  Martin E. Liza
    File:    constantsGD.m
    Detail:  It returns the neutral Gladstone-Dale constants from papers and 
@@ -12,7 +12,6 @@
    Author              Date            Revision
    ---------------------------------------------------
    Martin E. Liza      06/12/2020      Initial Version
-
 %}
 
 function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
@@ -81,4 +80,4 @@ function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD()
                                         (2 * vacPermittivitySI);
     end
 
-end
+end %end function constantsGD 

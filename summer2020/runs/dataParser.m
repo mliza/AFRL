@@ -24,7 +24,7 @@ function [dataOut] = dataParser(filename)
     [rows, columns] = size(numDataIn);
     [rowNaN colNaN] = find(isnan(inFile.data(:,columns))); %find col where NaN starts 
 
-    % Cleanout input data header  
+    % Cleanout input data header 
     % This might need to be modify to work with other data files 
     % Removes the words VARIABLES and = from data file 
     headersIn = erase( convertCharsToStrings(inFile.textdata{1}), "VARIABLES" ); 

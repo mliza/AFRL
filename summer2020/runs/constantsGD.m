@@ -1,5 +1,5 @@
 %{ 
-   Date:    07/12/2020
+   Date:    06/12/2020
    Author:  Martin E. Liza
    File:    constantsGD.m
    Detail:  It returns the neutral Gladstone-Dale constants from papers and 
@@ -11,12 +11,11 @@
 
    Author              Date            Revision
    ---------------------------------------------------
-   Martin E. Liza      07/12/2020      Initial Version
+   Martin E. Liza      06/12/2020      Initial Version
 
 %}
 
-%clear; clc;
-%function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
+function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
     
     % Physical Constants 
     vacPermittivitySI = Constant.SI.VacuumPermittivity; %[F/m]
@@ -81,7 +80,5 @@
         ionGDconstSI.(fieldName)      = specificIonPolSI.(fieldName) / ... 
                                         (2 * vacPermittivitySI);
     end
-    clear i fieldName fieldNames;  
-    who 
 
-%end
+end

@@ -40,10 +40,6 @@ function [ keyMatrixIndxX, keyMatrixIndxY ] = dataSplit(dataStruct)
         keyMatrixIndxY(i,:) = keyVector(1:yGridLim); 
     end
 
-    %Flip the first column with second  
-    temp = keyMatrixIndxY(1,:);
-    keyMatrixIndxY(1,:) = keyMatrixIndxY(2,:); 
-    keyMatrixIndxY(2,:) = temp; 
 
     % Creates the index combination to re arrange the data on Y 
     for i = 1:yLimVec
@@ -51,18 +47,13 @@ function [ keyMatrixIndxX, keyMatrixIndxY ] = dataSplit(dataStruct)
         keyVector = find( dataIn.X == lookUpXindx(i) );  
         keyMatrixIndxX(:,i) = keyVector(1:xGridLim); 
     end
-
     %Flip the first column with second  
     temp = keyMatrixIndxX(:,1);
     keyMatrixIndxX(:,1) = keyMatrixIndxX(:,2); 
     keyMatrixIndxX(:,2) = temp; 
 
-    %Populate Data  
-    for i = 1:xGridLim
-        for j = 1:yGridLim
-            yData(i,j) = dataIn.Y( keyMatrixIndxY(i,j) );
-            xData(i,j) = dataIn.X( keyMatrixIndxX(i,j) );
-            roData(i,j) = dataIn.rho( keyMatrixIndxX(i,j) );
-        end
-    end
+    %Flip the first column with second  
+    temp = keyMatrixIndxX(2,1);
+    keyMatrixIndxX(2,1) = keyMatrixIndxX(1,1); 
+    keyMatrixIndxX(1,1) = temp; 
 end

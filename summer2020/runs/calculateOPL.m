@@ -8,65 +8,61 @@
    Ex.     calculateOPL 
 
    Author              Date            Revision
-   ---------------------------------------------------------
-   Martin E. Liza      06/04/2020      Initial Version
+   ----------------------------------------------------------------------
+   Martin E. Liza      06/04/2020      Initial Version.
    Martin E. Liza      06/16/2020      Created Plots and implemented the  
-                                       constantsGD.m file on it 
+                                       constantsGD.m file on it. 
+   Martin E. Liza      06/21/2020      Revised the script to work with 
+                                       multiple dimension structures, 
+                                       implemented OPL and OPD.
                                        
 
 %}
 
-clear all; close all; 
+clear all; close all; clc; 
 % Import Data
 dataIn = dataParser('45AoA/output.plt');
 [ constGD, neutrGD, ionGD ] = constantsGD(); 
+[ rowIn, colIn ] = size(dataIn.X);
+
 
 % Calculate total Gladsone-Dale Constant and index of refraction 
-% Modify this without using loops 
-for i = 1:length(dataIn.X) 
-    totConstGD(i) = ((constGD.O * dataIn.rho_O(i)) + (constGD.O2 * dataIn.rho_O2(i)) + ...
-                     (constGD.N * dataIn.rho_N(i)) + (constGD.NO * dataIn.rho_NO(i)) + ...
-                     (constGD.N2 * dataIn.rho_N2(i))) / dataIn.rho(i); 
+totConstGD = ( (constGD.O .* dataIn.rho_O) + (constGD.O2 .* dataIn.rho_O2) + ...
+               (constGD.N .* dataIn.rho_N) + (constGD.NO .* dataIn.rho_NO) + ...
+               (constGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
 
-    totNeutrGD(i) = ((neutrGD.O * dataIn.rho_O(i)) + (neutrGD.O2 * dataIn.rho_O2(i)) + ...
-                     (neutrGD.N * dataIn.rho_N(i)) + (neutrGD.NO * dataIn.rho_NO(i)) + ...
-                     (neutrGD.N2 * dataIn.rho_N2(i))) / dataIn.rho(i); 
+totNeutrGD = ( (neutrGD.O .* dataIn.rho_O) + (neutrGD.O2 .* dataIn.rho_O2) + ...
+               (neutrGD.N .* dataIn.rho_N) + (neutrGD.NO .* dataIn.rho_NO) + ...
+               (neutrGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
 
-    totIonGD(i)   = ((ionGD.O * dataIn.rho_O(i)) + (ionGD.O2 * dataIn.rho_O2(i)) + ...
-                     (ionGD.N * dataIn.rho_N(i)) + (ionGD.NO * dataIn.rho_NO(i)) + ...
-                     (ionGD.N2 * dataIn.rho_N2(i))) / dataIn.rho(i); 
+totIonGD   = ( (ionGD.O .* dataIn.rho_O) + (ionGD.O2 .* dataIn.rho_O2) + ...
+               (ionGD.N .* dataIn.rho_N) + (ionGD.NO .* dataIn.rho_NO) + ...
+               (ionGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
 
-    N.constant(i) = totConstGD(i) * dataIn.rho(i) + 1; 
-    N.neutral(i)  = totNeutrGD(i) * dataIn.rho(i) + 1;
-    N.ion(i)      = totIonGD(i) * dataIn.rho(i)  + 1;
-end 
-
-% Calculate distance formula 
-distance(1) = 0; 
-for i = 2:length(dataIn.X)  
-    distance(i) = sqrt( (dataIn.X(i) - dataIn.X(i-1))^2 + ...
-                  (dataIn.Y(i) - dataIn.Y(i-1))^2 ) + distance(i-1);
-end 
+N.constant = totConstGD .* dataIn.rho; 
+N.neutral  = totNeutrGD .* dataIn.rho;
+N.ion      = totIonGD .* dataIn.rho;
 
 % Calculating OPL and OPD 
-%OPL = trapz(distance,indexN); 
-%OPD = OPL - mean(OPL);
-
+nFieldName = fieldnames(N);
+for n = 1:length(nFieldName)
+    headerName = nFieldName{n};
+    indexN = N.(headerName);
+    for i = 1:colIn 
+        vectorOPL(i) = trapz(dataIn.Y(:,1),indexN(:,i)); 
+        OPL.(headerName) = vectorOPL; 
+        OPD.(headerName) = OPL.(headerName) - mean(OPL.(headerName));
+    end
+end
 % Plot index of refraction 
 figure 
-movingAvgConst = 200;
-nFieldName = fieldnames(N);
-meanDistance = movmean(distance, movingAvgConst);
 for i = 1:length(nFieldName)
     nIndx = nFieldName{i}; 
-    OPL.(nIndx) = distance .* N.(nIndx);
-    meanN.(nIndx) = movmean(N.(nIndx), movingAvgConst); 
-   % plot(distance, N.(nIndx) ) 
-    plot(meanDistance, ((meanN.(nIndx)-1) * 10^4))
+    plot(dataIn.X(1,:), OPD.(nIndx), 'o-')
     hold on 
 end 
 legend(nFieldName);
-xlabel('distance [m]');
-ylabel('(n-1) x 10^4 [ ]');
+xlabel('distance-X [m]');
+ylabel('OPD [ ]');
 hold off
 

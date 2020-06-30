@@ -210,7 +210,7 @@
 \fi
 
 % Weeks 2-4
-\iftrue
+\iffalse
     \section{Atmospheric Propagation Vs. Aero-Optics \cite{siegenthaler:aiaa:2008}} 
         \begin{itemize} 
             \item In the case of atmospheric propagation, the index of refraction variations are due to temperature fluctuations caused by very large scale (relative to the beam aperture) temperature gradients in a region of the atmosphere that itself is n shear and has turbulence scales that cascade from the largest scales down to sub aperture scales.
@@ -269,14 +269,57 @@
 
 \fi
 
+% Weeks 4-6
+\iffalse 
     \section{Physics and Measurement of Aero-Optical Effects: Past and Present \cite{jumper:arofm:2017}}
         \begin{itemize}
             \item The United States had two periods of funding, both associated with the development of high-speed (transonic) airborne laser systems.
             \item Optical turbulence is defined as density fluctuations in the air due to atmospheric turbulence and temperature gradients. 
             \item In order to study aero-optical effects, one needs to measure the aberrated wave fronts imposed on a otherwise planar wave front for a large-aperture laser projected through aero-optical turbulence. 
             \item The measurement of the aberrations is a direct result of the air's unsteady density field in the flow given that the air's index of refraction is directly linked to the fluctuating density through the Gladstone-Dale relationship. 
+            \item The basic theory depended on the pressure fluctuations to be negligible. However, this is not the case or some flows.
+            \item The $\Sub{OPD}{rms}$ is given by: $\overline{\Avg{OPD^2}} = \Sub{R}{GD}^2\int^{\Sub{z}{1}}_{0}\int^{\Sub{z}{1}}_{0}\Sub{Cov}{\rho^{\prime}}\Parenthesis{z,z^{\prime}}dz^{\prime}dz $
+            \item The covariance function is defined as $\Sub{Cov}{\rho^{\prime}}\Parenthesis{z,z^{\prime}} = \overline{ \SqBracket{\Function{\rho}{z} - \Function{\bar{\rho}}{z^{\prime}}} \SqBracket{\Function{\rho}{z^{\prime}} - \Function{\bar{\rho}}{z^{\prime}}} } $; note the prime represents the fluctuations in the medium. 
+            \item The covariance function is usually modeled by either an exponential or Gaussian functional form based on the length scale $\Parenthesis{\Lambda}$, and the square of the fluctuation density $\Parenthesis{\Sub{\rho^{{\prime}^2}}{rms}}$
+            \item The Linking Equation is given by: $ \overline{\Avg{OPD^2}} = \alpha\Sub{R}{GD}^2\int^{\Sub{z}{1}}_0 \Sub{\rho^{{\prime}^2}}{rms}  \Parenthesis{z}\Lambda\Parenthesis{z}dz$, where $\alpha$ depends on the form of the covariance function equal to $2$ if exponential and $\sqrt{\pi}$ is Gaussian.
         \end{itemize}
 
+
+    \section{Resolution requirements for aero-optical simulations \cite{mani:jocp:2008}}
+        \begin{itemize}
+            \item In the high Reynolds number limit, for a given geometry and Mach number, the spatial resolution required to capture aero-optics within a pre-specified error margin does not scale with Reynolds number. 
+            \item In typical aero-optical applications this resolution requirement is much lower than the resolution required for direct numerical simulation, and therefore, a typical large-eddy simulation can capture aero-optical effects. 
+            \item Such initial distortions reduce the coherence o the beams, so that by the time they arrive at the receivers, they have much lower intensities and are more dispersed compared to undistorted beams. 
+            \item An optical beam under such conditions experiences two regimes of propagation: first, propagation through the turbulence near the optical device, where densities fluctuations are significant and of relatively high frequency/wavenumber and second, propagation through the atmosphere. 
+            \item In the first region, the distance is very short and the optical wavelength is much smaller than the flow structures, hence the ray optics assumptions are valid. As a result, scattering and change in the optical wave amplitude can be ignore in this region.
+            \item The problem of distortion due to atmospheric turbulence can generally be corrected using adaptive optics, because the refractive index field involves larger spatio-temporal scales. 
+            \item Aero-optical distortions usually take place at spatial and temporal frequencies which are order of magnitudes higher than the capabilities of current correction technologies. 
+            \item Aero-optic distortions are highly dependent on fluctuations in the turbulent density field, an accurate representation of aero-optical distortions with a RANS simulation alone is not possible. 
+            \item LES is of major recent interest for aero-optical computations; because is capable of capturing a range of flow structures, from large-scale motions down to the scale comparable to the mesh spacing.
+            \item In previous studies it has been implicitly assumed that sub-grid scales and artificially damped resolved small-scale features of the flow are optically unimportant. Although, these simulations may computers low order flow statistics, this does not necessarily guarantee that the aero-optical effects of the flow can be provided with the same resolution.
+            \item $ P - \Sub{P}{0} = \Sub{\nu}{0}^2\Parenthesis{\rho - \Sub{\rho}{0} } $, where $0$ is the free stream conditions and $\nu$ is the speed of sound.
+            \item Spectral information regarding the pressure field can be linked to the spectrum index field, because the equation above and the Gladstone-Dale relation are linear. 
+            \item Fourier optics methods can compute the wave propagation after the turbulent medium accurate if and only if, the error beam has much less energy than the computed beam.  
+            \item The accuracy of the aero-optical computations can be based on this energy ratio. If the ration is smaller than a threshold (ex. $5\%$), then it can be assumed that the resolution of the flow simulation is adequate to capture the aero-optical effects.  
+            \item The grid resolution $\Parenthesis{\Sub{l}{c}}$ is given by: $\Sub{l}{c} = \frac{2\pi}{\Sub{k}{c}}$, where $\Sub{k}{c}$ is the cut-off wave number.  
+            \item The cut-off wave-number is usually in the inertial range and is smaller than the wave-number associated with Kolmogorov length scale $\Parenthesis{\Sub{k}{\eta} = \frac{2\pi}{\eta} }$. 
+            \item $\frac{12\pi^3\Sub{B}{p}}{7\lambda^2}\SqBracket{\frac{\Parenthesis{\Sub{n}{0} -1}^2 \epsilon^{4/3}}{\nu^4}}\Parenthesis{\frac{\Sub{l}{c}}{2\pi}}^{7/3}\,\Delta z < \zeta $ review paper to understand equation, this is the result from the paper. 
+            \item For a flow with a characteristic length $\Parenthesis{l}$ and a characteristic velocity, the $\Sub{l}{c}$ can be approximated to be: $\Sub{l}{c} \approx \frac{\zeta^{3/7}}{M^{12/7}\Parenthesis{\Sub{n}{0} - 1 }^{6/7}}\Parenthesis{\frac{\lambda^{6/7} l^{4/7}}{\Delta z^{3/7}}} $ 
+            \item The importance flow parameters are the turbulence length scale and the turbulent Mach number; the important optical parameters are the characteristic refractive index and the optical wavelength; the important geometric parameter is the depth of the turbulence field. 
+            \item In a typical aero-optical setup, one can have $l\approx 1\Units{m}, \Delta z\approx 1\Units{m}, \lambda\approx 1\Units{\mu m}, M\approx 0.4\Units{\,}, \Parenthesis{n-1} \approx 10^{-4},\text{ and } \zeta\approx 5\%$. Based on these parameters and assuming $\Sub{B}{p} = 8.5$, the value of $\Sub{l}{c} = 1.2\Units{cm}$, with a grid spacing of $6\Units{mm}$ (based on Nyquist criterion). The required number of grid points in each direction would be approximately $170$. 
+            \item In summary, $\Sub{l}{c} << \Sub{l}{geometry}, \Sub{l}{aperture} $. 
+         \end{itemize}
+         
+
+\fi 
+
+    \section{Theory and applications of atomic and ionic polarizabilities \cite{mitroy:jop:2010}}
+        \begin{itemize}
+            \item The dielectric constant and the refractive index of any gas are examples of macroscopic properties that are largely determined by the dipole polarizability.
+            \item The calculation o atomic polarizabilities is a demanding special case of the calculation of atomic structure. 
+            \item On this paper, only low-order polarizabilities are considered, high-order polarizabilities are not. 
+            \item The most widely used unit for theoretical atomic physics is atomic units (a.u.), in which, $q=\Sub{m}{e}=4\pi\Sub{\epsilon}{0}=\hbar=1$.  
+        \end{itemize} 
 \newpage
 \printbibliography[title=Bibliography]
 \end{document}

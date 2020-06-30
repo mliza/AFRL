@@ -16,8 +16,7 @@
    Martin E. Liza      06/20/2020      Added the helper function (dataSplit.m) 
 %}
 
-function [dataOut] = dataParser(filename)
-    
+function [dataOut, dataOutStruct ] = dataParser(filename)
     inFile = importdata(filename);
     numDataIn = inFile.data; 
     [rows, columns] = size(numDataIn);
@@ -71,4 +70,6 @@ function [dataOut] = dataParser(filename)
 
 end % end function dataParser()
 
+% xlim([ 0 0.5]) 
+%ylim([0 2.5*10^-3])
 

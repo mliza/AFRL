@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.0 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -44,7 +44,7 @@
       \strng{authornamehash}{04c8b6f4e8a485ac46a5bb48b41f2762}
       \strng{authorfullhash}{04c8b6f4e8a485ac46a5bb48b41f2762}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annual Review of Fluid Mechanics}
@@ -91,7 +91,7 @@
       \strng{authorfullhash}{88ee456bc71489ba2ecb004b9e0935a1}
       \field{extraname}{1}
       \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2018 Plasmadynamics and Lasers Conference}
@@ -119,7 +119,7 @@
       \strng{authornamehash}{9f24aeb44ccf77e6c03763a61c2e948c}
       \strng{authorfullhash}{9f24aeb44ccf77e6c03763a61c2e948c}
       \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{AIAA Journal}
@@ -173,7 +173,7 @@
       \strng{authorfullhash}{b877ccf44088fb309182a7cb16908e75}
       \field{extraname}{1}
       \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{AIAA Scitech 2020 Forum}
@@ -212,7 +212,7 @@
       \strng{authornamehash}{78c8a23b73ccef19aa0202e0e8afc8f2}
       \strng{authorfullhash}{78c8a23b73ccef19aa0202e0e8afc8f2}
       \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Modeling, Systems Engineering, and Project Management for Astronomy III}
@@ -254,7 +254,7 @@
       \strng{authornamehash}{e9cabea974e9c16e3e4782d86acea219}
       \strng{authorfullhash}{e9cabea974e9c16e3e4782d86acea219}
       \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{46th AIAA Thermophysics Conference}
@@ -328,7 +328,7 @@
       \strng{editorfullhash}{4b2bcac8532b25668c6df63fd78febbe}
       \field{extraname}{2}
       \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Adaptive Optics Systems IV}
@@ -365,7 +365,7 @@
       \strng{authornamehash}{195f3ced62888e20d02b252f0e8a3d34}
       \strng{authorfullhash}{195f3ced62888e20d02b252f0e8a3d34}
       \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{AIAA Scitech 2020 Forum}
@@ -423,7 +423,7 @@
       \strng{editornamehash}{8957255691936827a172d06fbc16be75}
       \strng{editorfullhash}{8957255691936827a172d06fbc16be75}
       \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Optics in Atmospheric Propagation and Adaptive Systems VI}
@@ -474,7 +474,7 @@
       \strng{authornamehash}{3fac70454ddbb898d4e05e321820fdc9}
       \strng{authorfullhash}{e03aa0e55e46ed9b83efda924cfc3e8f}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Spacecraft and Rockets}
@@ -506,7 +506,7 @@
       \strng{authornamehash}{1ae3c4407a377f80234c4bcebe163a21}
       \strng{authorfullhash}{1ae3c4407a377f80234c4bcebe163a21}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{AIAA Journal}
@@ -549,7 +549,7 @@
       \strng{authorfullhash}{c226d5f6f8e5b5f183167f366ec8b0b3}
       \field{extraname}{2}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Physics D: Applied Physics}
@@ -592,7 +592,7 @@
       \strng{authornamehash}{730034873fa61e54adefd9337c91dc66}
       \strng{authorfullhash}{730034873fa61e54adefd9337c91dc66}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{33rd AIAA Fluid Dynamics Conference and Exhibit}
@@ -615,7 +615,7 @@
       \strng{authornamehash}{5862b909e5773231ae82f1a0e5e896bc}
       \strng{authorfullhash}{5862b909e5773231ae82f1a0e5e896bc}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Physics of Fluids}
@@ -646,7 +646,7 @@
       \strng{authornamehash}{f136d0d36ac2ff9b917f9a8437dffea0}
       \strng{authorfullhash}{f136d0d36ac2ff9b917f9a8437dffea0}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Physics of Fluids}
@@ -688,7 +688,7 @@
       \strng{authornamehash}{3f2dd4e769d8d0b9fca364295ee0aeb2}
       \strng{authorfullhash}{110e7779f9bc4429a1d185ae7bbb9af4}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Combustion and Flame}
@@ -730,7 +730,7 @@
       \strng{authornamehash}{f3fc619de7e13b427382e0260fdc0a86}
       \strng{authorfullhash}{f3fc619de7e13b427382e0260fdc0a86}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{46th AIAA Aerospace Sciences Meeting and Exhibit}
@@ -764,7 +764,7 @@
       \strng{authornamehash}{d4975c1548693ff8784de83625a08a99}
       \strng{authorfullhash}{d4975c1548693ff8784de83625a08a99}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{42nd AIAA Fluid Dynamics Conference and Exhibit}
@@ -792,7 +792,7 @@
       \strng{authornamehash}{afc9720b36467d65826d14c732b1843b}
       \strng{authorfullhash}{afc9720b36467d65826d14c732b1843b}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annual Review of Fluid Mechanics}
@@ -802,6 +802,38 @@
       \field{year}{2017}
       \field{pages}{419\bibrangedash 441}
       \range{pages}{23}
+    \endentry
+    \entry{mitroy:jop:2010}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6b885576c30814cb1ff92d9ba8821154}{%
+           family={J\bibnamedelima Mitroy},
+           familyi={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={M\bibnamedelima S\bibnamedelima Safronova},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2990ead6f49dc03f149a073952a8750d}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Charles\bibnamedelima W},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a7f71b1c745e41305d8179863927ad6}
+      \strng{fullhash}{3a7f71b1c745e41305d8179863927ad6}
+      \strng{bibnamehash}{3a7f71b1c745e41305d8179863927ad6}
+      \strng{authorbibnamehash}{3a7f71b1c745e41305d8179863927ad6}
+      \strng{authornamehash}{3a7f71b1c745e41305d8179863927ad6}
+      \strng{authorfullhash}{3a7f71b1c745e41305d8179863927ad6}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics B: Atomic, Molecular and Optical Physics}
+      \field{month}{10}
+      \field{number}{20}
+      \field{title}{Theory and applications of atomic and ionic polarizabilities}
+      \field{volume}{43}
+      \field{year}{2010}
+      \field{pages}{202001}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection

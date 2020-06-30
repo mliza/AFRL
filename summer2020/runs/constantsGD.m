@@ -1,5 +1,5 @@
 %{ 
-   Date:    06/22/2020
+   Date:    06/24/2020
    Author:  Martin E. Liza
    File:    constantsGD.m
    Detail:  It returns the neutral Gladstone-Dale constants from papers and 
@@ -12,19 +12,21 @@
    Author              Date            Revision
    ---------------------------------------------------
    Martin E. Liza      06/12/2020      Initial Version
+   Martin E. Liza      06/24/2020      Implemented the right method 
+                                       to calculate the GD-constants 
 %}
-
-function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
+clear all; close all; clc;
+%function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD() 
     
     % Physical Constants 
     vacPermittivitySI = Constant.SI.VacuumPermittivity; %[F/m]
     avogadroNumber    = Constant.SI.AvogadroNumber;     %[1/mol]
 
     % Gladstone-Dale constants, using table 1 from progress report 1 
-    GDconstSI.N2 = 2.40E-4; %[kg/m^3]
-    GDconstSI.N  = 3.10E-4; %[kg/m^3]
-    GDconstSI.O2 = 1.93E-4; %[kg/m^3]
-    GDconstSI.O  = 2.04E-4; %[kg/m^3] 
+    GDconstSI.N2 = 2.38E-4; %[kg/m^3]
+    GDconstSI.N  = 3.01E-4; %[kg/m^3]
+    GDconstSI.O2 = 1.90E-4; %[kg/m^3]
+    GDconstSI.O  = 1.82E-4; %[kg/m^3] 
     GDconstSI.NO = 2.21E-4; %[kg/m^3]
 
     % Neutral polarizability volume, table 2a from progress report 1 [cgs]
@@ -52,8 +54,8 @@ function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD()
     % https://en.wikipedia.org/wiki/Polarizability
     % https://en.wikipedia.org/wiki/Molar_refractivity
     cgsToSI =  4 * pi * vacPermittivitySI * 10^-6;    
-    molarRefractConst = (4 * pi / 3) * avogadroNumber; 
-
+    molarRefractConst = (4 * pi / 3) * avogadroNumber;  %Constant from table 
+ 
     % Loops to calculate neutral and ion Gladston-Dale constants
     fieldNames = fieldnames(GDconstSI);  
     for i = 1:length(fieldNames)
@@ -78,6 +80,57 @@ function[ GDconstSI, neutralGDconstSI, ionGDconstSI ] = constantsGD()
                                         (2 * vacPermittivitySI); 
         ionGDconstSI.(fieldName)      = specificIonPolSI.(fieldName) / ... 
                                         (2 * vacPermittivitySI);
+
+        % 2nd way (Rgd =  alpha[cm^3] * NA * 2pi * E-6/M )
+        neutGDconstSI.(fieldName) = 2 * pi * neutralPolCGS.(fieldName) * ... 
+                                    avogadroNumber * 10^-6 / attWeightSI.(fieldName); 
+
+        ionGDconstSec.(fieldName) =  2 * pi * ionPolCGS.(fieldName) * ... 
+                                    avogadroNumber * 10^-6 / attWeightSI.(fieldName); 
+
+        % Using table, 1A^3 = 2.5222549[cm^3/mol] 
+        neutralGDtable.(fieldName) = 2.522549 * 10^18 * neutralPolCGS.(fieldName) *  ...
+                                     2 * pi / attWeightSI.(fieldName) ;
     end
 
-end %end function constantsGD 
+    % Convert the structure to a vector  
+    for i = 1:length(fieldNames)
+        fieldIndx = fieldNames{i}; 
+        neutralFirst(i) = neutralGDconstSI.(fieldIndx) * 10^4;  
+        neutralSec(i)   = neutGDconstSI.(fieldIndx) * 10^4; 
+        ionFirst(i)     = ionGDconstSI.(fieldIndx) * 10^4; 
+        ionSec(i)       = ionGDconstSec.(fieldIndx) * 10^4; 
+        neutralConst(i) = GDconstSI.(fieldIndx) * 10^4; % tables 
+        neutGDconstTable(i) = neutralGDtable.(fieldIndx) * 10^4; %using table polarizability  constants 
+    end
+
+    % Plots
+    figure 
+    plot(neutralConst, neutralConst, 'p', 'MarkerSize', 12)
+    hold on 
+    text( neutralConst, neutralConst, fieldNames,'Fontsize', 12, ...
+          'HorizontalAlignment', 'left','VerticalAlignment', 'top' )
+  %  plot( neutGDconstTable, neutGDconstTable, '*', 'MarkerSize', 12 )
+%    text( neutGDconstTable, neutGDconstTable, fieldNames,'Fontsize', 12, ...
+     %     'HorizontalAlignment', 'left','VerticalAlignment', 'top' )
+    plot( neutralSec, neutralSec, 'd', 'MarkerSize', 12 )
+    text( neutralSec, neutralSec, fieldNames,'Fontsize', 11, ...
+          'HorizontalAlignment', 'right','VerticalAlignment', 'bottom' )
+    legend( {'R_{GD}, table ' , 'R_{GD}, calculated'}, ... 
+            'Location', 'southeast' )
+    xlabel( 'R_{GD} \times 10^{-4} [m^3/kg]' ) 
+    ylabel( 'R{_GD} \times 10^{-4} [m^3/kg]' ) 
+    title('GladstoneDale constants')
+    set( gcf, 'InvertHardcopy', 'off' )
+    hold off 
+
+    % Error Calculation  
+    errUnitAnalysis = abs( (neutralSec - neutralConst) ./ neutralConst ) .* 100 ;
+    errPolTable = abs( (neutGDconstTable - neutralConst) ./ neutralConst ) .* 100;
+    errWiki = abs( (neutralFirst - neutralConst) ./ neutralConst ) .* 100; 
+    errION = abs( (ionSec - neutralConst) ./ neutralConst ) .* 100 ; 
+    round(errUnitAnalysis,3) 
+    round(errION,3) 
+
+
+%end %end function constantsGD 

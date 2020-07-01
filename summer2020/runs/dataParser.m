@@ -6,7 +6,7 @@
             returns the data as a structure of matrices. Uses the 
             helper sript, dataSplit.m.
 
-   Ex.      [ dataOutStruct ] = dataParser('fileName.plt') 
+   Ex.      [ dataOutStruct ] = dataParser('fileName.dat') 
 
    Author              Date            Revision
    -------------------------------------------------------------------
@@ -14,22 +14,30 @@
    Martin E. Liza      06/18/2020      Added flags to allow output.plt 
                                        and convergence.plt to work 
    Martin E. Liza      06/20/2020      Added the helper function (dataSplit.m) 
+   Martin E. Liza      06/30/2020      Deleted the dataSplit function, and modified 
+                                       to work with .dat, after using the python macro 
+                                       rom tecplot 
 %}
 
-function [dataOut, dataOutStruct ] = dataParser(filename)
+function [ dataOutStruct ] = dataParser(filename)
     inFile = importdata(filename);
     numDataIn = inFile.data; 
     [rows, columns] = size(numDataIn);
-    [rowNaN colNaN] = find(isnan(inFile.data(:,columns))); %find col where NaN starts 
+
+    % Put all the header in one array  
+    for i = 1:length(inFile.textdata)-2
+        headerMultiple{i} = inFile.textdata{i};
+    end 
 
     % Clean out input data header 
     % Removes the words VARIABLES and = from data file 
-    headersIn = erase( convertCharsToStrings(inFile.textdata{1}), "VARIABLES" ); 
+    headersIn = erase( convertCharsToStrings(headerMultiple), "VARIABLES" ); 
     headersIn = erase( headersIn, "=" );
-    % Removes the double quotes 
-    headersOut = strrep(headersIn, '"', '');
-    % Split the headers 
-    headers = strsplit(headersOut, ' ');
+    headersIn = erase( headersIn, "ZONE" );
+    % Removes the double quotes and spacing after single quote  
+    headers = strrep(headersIn, '"', '');
+    headers = strrep(headers, ' ', '');
+
 
     % Remove empty strings from the header 
     if headers(1) == ""
@@ -42,34 +50,6 @@ function [dataOut, dataOutStruct ] = dataParser(filename)
     %Creates a data structure using header's names
     for i = 1:columns
         headerName = headers(i); 
-
-        % Flag that allows data with and withouth NaNs on it to be parse
-        if isempty(rowNaN) == true
-            dataOutStruct.(headerName) = [ numDataIn(:,i) ];
-        else 
-            dataOutStruct.(headerName) = [ numDataIn(1:rowNaN(1)-1,i) ];
-        end 
-
-    end
-
-    % Calls helper function 
-    [ keyMatrixX, keyMatrixY ] = dataSplit(dataOutStruct);
-    [ keyMatrixRow, keyMatrixCol ] = size(keyMatrixX);
-
-    % Rearrange the vector structure to a matrix structure 
-    % using keyMatrix from the helper Function  
-    for n = 1:columns 
-        headerName = headers(n); 
-        dataStructVec = dataOutStruct.(headerName);
-        for i = 1:keyMatrixRow 
-            for j = 1:keyMatrixCol
-                dataOut.(headerName) = dataStructVec( keyMatrixX ); 
-            end
-        end
-    end
-
-end % end function dataParser()
-
-% xlim([ 0 0.5]) 
-%ylim([0 2.5*10^-3])
-
+        dataOutStruct.(headerName) = [ numDataIn(:,i) ];
+    end 
+end 

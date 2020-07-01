@@ -19,7 +19,7 @@
 
 clear all; close all; clc; 
 % Import Data
-dataIn = dataParser('45AoA/output.plt');
+dataIn = dataParser('dataOut.dat');
 [ constGD, neutrGD, ionGD ] = constantsGD(); 
 [ rowIn, colIn ] = size(dataIn.X);
 

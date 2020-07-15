@@ -14,7 +14,7 @@
 
 \begin{document}
 % Weeks 1-2 
-\iffalse
+\iftrue
     \section{Physics and Computation of Aero-Optics \cite{wang:arofm:2012}}
         \begin{itemize} 
             \item The timescale for optical propagation is negligibly short relative to flow timescales, and hence optical popagation can be solved in a frozen flow field at each time instant. 
@@ -210,7 +210,7 @@
 \fi
 
 % Weeks 2-4
-\iffalse
+\iftrue
     \section{Atmospheric Propagation Vs. Aero-Optics \cite{siegenthaler:aiaa:2008}} 
         \begin{itemize} 
             \item In the case of atmospheric propagation, the index of refraction variations are due to temperature fluctuations caused by very large scale (relative to the beam aperture) temperature gradients in a region of the atmosphere that itself is n shear and has turbulence scales that cascade from the largest scales down to sub aperture scales.
@@ -270,7 +270,7 @@
 \fi
 
 % Weeks 4-6
-\iffalse 
+\iftrue 
     \section{Physics and Measurement of Aero-Optical Effects: Past and Present \cite{jumper:arofm:2017}}
         \begin{itemize}
             \item The United States had two periods of funding, both associated with the development of high-speed (transonic) airborne laser systems.
@@ -308,10 +308,9 @@
             \item The importance flow parameters are the turbulence length scale and the turbulent Mach number; the important optical parameters are the characteristic refractive index and the optical wavelength; the important geometric parameter is the depth of the turbulence field. 
             \item In a typical aero-optical setup, one can have $l\approx 1\Units{m}, \Delta z\approx 1\Units{m}, \lambda\approx 1\Units{\mu m}, M\approx 0.4\Units{\,}, \Parenthesis{n-1} \approx 10^{-4},\text{ and } \zeta\approx 5\%$. Based on these parameters and assuming $\Sub{B}{p} = 8.5$, the value of $\Sub{l}{c} = 1.2\Units{cm}$, with a grid spacing of $6\Units{mm}$ (based on Nyquist criterion). The required number of grid points in each direction would be approximately $170$. 
             \item In summary, $\Sub{l}{c} << \Sub{l}{geometry}, \Sub{l}{aperture} $. 
+            \item Optical wavelength, dept of the turbulent field, length scale of large flow structures, characteristic Mach number and index of refraction are the governing parameters in determining the required resolution. The required resolution does not scale with Reynolds number flow.
          \end{itemize}
          
-
-\fi 
 
     \section{Theory and applications of atomic and ionic polarizabilities \cite{mitroy:jop:2010}}
         \begin{itemize}
@@ -320,6 +319,92 @@
             \item On this paper, only low-order polarizabilities are considered, high-order polarizabilities are not. 
             \item The most widely used unit for theoretical atomic physics is atomic units (a.u.), in which, $q=\Sub{m}{e}=4\pi\Sub{\epsilon}{0}=\hbar=1$.  
         \end{itemize} 
+\fi 
+
+% Weeks 7-8
+\iftrue 
+    \section{Development of an Integrated Aero-Optics Modeling Capability: OVERFLOW-aeroOptics \cite{coirier:aerospace:2010}}
+        \begin{itemize}
+            \item OVERFLOW-aeroOptics is a specialized version of the OVERFLOW $2.1$x overset CFD solver that has been developed to study aerodynamically-induced aberrations to optical wave forms as they are propagated through an unsteady, compressible and turbulent flow field.  
+            \item A reduced form of Maxwell's equations, the Paraxial Beam equation, is solved concurrently with the Navier-Stokes equations to propagate a given wave for through the CFD generated density field. 
+            \item Code validation is made by performing a mesh refinement study and comparing computed to exact solutions for the propagation of a Gaussian beam through a vacuum. 
+            \item Near-field propagation (aeo-optics) maintains some similarities to the far-field (atmospheric) propagation, but due to the interaction between turbulence length scales, beam wavelengths, aperture and distances, the two often require different approaches to tackle.
+            \item Diffraction may be neglected when $\frac{\lambda L}{l^2} << 1$ (Fresnel condition), where $\lambda$ is the wavelength, $L$ is the propagation length and $l$ is the turbulence length scale. 
+            \item OVERFLOW is an overset, finite-difference, compressible, Reynolds-Averaged Navier-Stokes (RANS) and Detached Eddy Simulation (DES) solver.
+            \item OVERFLOW is written in Fortran90, the Paraxial solver has been developed as a F90 module, named aeroOpticsModule.  
+            \item Interpolation from a CFD optic grid to the spectral grid is made using an $8$-noded isoparametric element interpolation that is simplified for these orthogonal and grids.
+            \item The geometric OPD is computed on the optic grids using procedures invoked separately from the paraxial solver, and is stored on disk after each calculation. 
+            \item The paraxial beam solver is validated by comparing the computed to exact solutions for a Gaussian beam propagating through a vacuum, and by comparing computed values to those computed by the AOQ solver.
+            \item A mesh refinement study is performed and the error norms are plotted against mesh size. 
+        \end{itemize}
+
+
+    \section{Numerical study of evaluating the optical quality of supersonic flow fields \cite{wang:ao:2007}}
+        \begin{itemize}
+            \item A numerical method base on the uniform and hexahedral grids generated from computational fluid dynamics is presented for the analysis of aero-optical performance. A single grid is taken as a cell with isotropy and homogeneity inside, and it is assumed that the light rays transmit grit by grid.  
+            \item Aero-optics is a phenomenon of fluid-optic interactions. 
+            \item Compared with atmospheric optics, aero-optics is a near field optics. It typically involves the turbulent boundary layer, wake, and shear layer. 
+            \item If the grids are of fine resolution, we can assume that the gaseous medium inside a single grid is uniform and isotropic. If not, we should interpolate CFD grids so as to improve the resolution and gain approximately continuous flow data.  
+            \item For this paper, the grids generated from CFD are uniform and hexahedral, the size of which is equal to $1\Units{mm}$. Each CFD hexahedral grid is considered as an index cell with uniform refractive index.
+            \item The computational mesh has $64\times 64 \times 80$ grid points, ranging from $69$ to $132$ in the $\hat{x}$-direction and from $-31$ to $32$ in the $\hat{y}$-direction.  
+            \item If the temperature is very high, the index of refraction will be dependent mainly on the temperature and components of fluids. 
+            \item If $\Abs{\Sub{n}{j} - \Sub{n}{i}}s < \frac{\lambda}{4} $, wave-front errors can be neglected. Where, $s$ is the path length. 
+            \item The OPD can be transform to wave front phase by: $\Delta\Function{\phi}{\vec{r},t} = k\,OPD$, where $k$ is the wave number, $k = \frac{2\pi}{\lambda}$.
+            \item The OPD directly reflects the variations of the wave-front phase errors. 
+            \item The wavefront variance $\sigma^2$ is given by: $\sigma^2 = 2\Sub{R}{GD}^2 \int^L_0 \rho^{{\prime}^2}l^{\prime}\,dl $, where $\rho^{\prime}$ is the fluctuation density and $l^{\prime}$ is the turbulence length scale calculated from CFD. 
+            \item The wave-front variance is a measure of the dispersion about the mean for OPLs along a wavefront, and is crucial for modeling aero-optical parameters such as Strehl ratios and OTF for turbulent flows. 
+            \item Only if $\sigma^2$ are not too large, an estimate of the time-averaged Strehl ratio or a given wavefront phase variance is approximated by: $ SR = e^{-\Parenthesis{k\sigma}^2} $. 
+            \item In this paper, LES was used. 
+        \end{itemize}
+
+
+    \section{Computation study of aero-optical distortions by a turbulent wake \cite{mani:aiaa:2005}}
+        \begin{itemize}
+            \item The small-scales of the flow are found to play a significant role in causing optical aberrations, which places a more stringent grid-resolution requirement than that needed to capture the low order flow statistics. 
+            \item The depth of the aberrating flow field is usually smaller than or comparable to the projecting (or imaging) aperture.
+            \item Jones and Bender used LES to study aero-optical distortions in a fuselage/turret configuration. They used ray tracing to obtain the wavefront error and represented it in terms of Zernike polynomials. 
+            \item Most of the previous work to aero-optics has assumed that the major contribution to optical distortion was from the large resolved scales of the flow, and the sub-grid scale effect were simply ignore. 
+            \item TVD or upwinding techniques are highly dissipative. 
+            \item For this paper, the Reynolds number is $3900$ and the Mach number is $0.4$, LES was used to compute the CFD part.  
+            \item The numerical scheme used in LES is based on a non-dissipative staggered-mesh formulation, which leads to more accurate representations of a wide range of optically important flow scales. The effects of flow resolution and small-scale turbulence on optical aberrations are investigated by subjecting the refractive-index field to a low-pass filtering operation. Furthermore, a statistical analysis is carried out for the optical far field and its dependence on wavelength and distance of propagation is revealed. 
+            \item The LES code, originally written for a C-mesh, has been modified for a generalized O-mesh to enhance grid-smoothness and hence numerical stability.
+            \item The computational domain for the cylinder has a radius of about $20D$ ($D$ is the cylinder's diameter) and a width of $\pi D$ in the spanwise direction. 
+            \item The mesh size is $288\times 200\times 48$ in the wall normal, azimuthal and spanwise directions, respectively. A $16$ grid point sponge later is applied at the outer boundary to make it non-reflecting. 
+            \item The total integration time was over $70$ shedding cycles. From the last $14$ shedding cycles, of the simulation, about $800$ snapshots of the density field were saved for aero-optical study. 
+            \item The domain of beam propagation is divided into two parts: the small near field in which ray tracing can be applied accurately, and the far field in which the density is assumed spatially uniform and Fourier optics can be applied. 
+            \item The near field is taken to be within $10D$, while the far-field distance varies from $10^3D$ to infinity. The optical beam has a diameter of $0.3D$ and us directed at $17^{\circ}$ from the downstream axis. 
+            \item The optical wavelengths vary from $1.25\times 10^{-6}D$ to $10^{-5}D$. 
+        \end{itemize}
+
+
+    \section{A simple adaptive mesh generator for $2D$ finite element calculations (optical-wave theory) \cite{fernandez:ieee:1993}}
+        \begin{itemize}
+            \item The adaptive mesh method consists of the use of a suitable defined 'density function'. The new mesh is built starting from a minimal number of triangular elements which are then in several sweeps, repeatedly refined according to the density function. The Delaunay algorithm is used in each stage to keep the shape of the triangles as equilateral as possible.
+            \item Adaptive mesh refinement is a technique whereby a solution obtained with a rather coarse mesh is used to identify selected areas of the domain to refine. 
+            \item Adaptive remeshing is a method whereby a completely new mesh is generated adaptively, according to the results from the previous calculation.  
+            \item The remeshing proceeds as follows: once a result has been found for a certain value of the power, the power level is varied and the same mesh is used to obtain an approximate result. This is used in turn to generate the new mesh by providing the updated density function. 
+            \item Any suitable node-based function can be used as a 'density function'. 
+            \item The defining condition for a region in respect to the mesh generator is that no mesh elements will be allowed to cross the region boundaries. 
+            \item Stage one of the algorithm is to have specified the regions, materials and their boundaries, to subdivide each o them into a minimum number of triangles (the primary triangles).
+            \item Step one of the algorithm is to found the local maximum density function in each region and join all vertices to that point. The information relative to the triangles so formed is stored in an array containing the material type, the nodal number of the three vertices, the element number of the three neighbours (triangle sharing a side) and a flag.  
+            \item The total 'weight' $W$ of the problem is calculated by integrating the density function using either the primary triangulation (at the start of the process) or the current mesh. $W = \sum^M_{i=1} \Sub{w}{i} = \sum^M_{i=1}\int\Function{f}{x,y}dxdy $, where $M$ is the current number of elements. Assuming first order elements, the individual element weights are: $\Sub{w}{i} = \frac{A}{3}\Parenthesis{\Sub{f}{1} + \Sub{f}{2} + \Sub{f}{3}}$. Where, $\Sub{f}{i}$ is the value of the density function at the node $i$ and $A$ is the area of the triangle. 
+            \item The mesh generator can be controlled by specifying a desired total number of elements in the mesh and monitoring the individual element weights. 
+        \end{itemize}
+
+\fi
+
+    \section{CFD Mesh Generation: A Practical Guideline}
+        \begin{itemize}
+            \item The quality of the mesh has significant implications on the convergence and stability of the numerical simulation and accuracy of the computational results. 
+            \item By definition, a mesh in itself consist of an arrangement of discrete number of points overlaying the whole domain geometry. 
+            \item Body fitted meshes in Cartesian coordinates, are tedious and time-consuming to be set up; these steps at the boundary may also introduce errors in computations of the wall stresses, heat fluxes, boundary-layer effects, etc. 
+            \item Inner mesh can be algebraically determined through interpolation from the boundary values, which is computationally inexpensive.   
+            \item Look at transfinite interpolation methods, \href{https://www.mathworks.com/matlabcentral/fileexchange/40681-transfinite-interpolation}{matlab script}. 
+            \item The method of transfinite interpolation according to Gordon and Thiel $\Parenthesis{1982}$, consists of generating the interior mesh from the boundary grid data using appropriate interpolation functions or 'blending' functions. 
+            \item Hermite interpolation, is a method of interpolating data as a polynomial function. Poisson equation can be use or this (read more).  
+            \item Are we using structured or unstructured mesh? Are we having matching or unmatching cell faces? 
+        \end{itemize}
+
 \newpage
 \printbibliography[title=Bibliography]
 \end{document}

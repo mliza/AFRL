@@ -1,19 +1,22 @@
-#!/usr/local/bin/python3.7
+#!/usr/local/bin/python3.8
 import tecplot as tp
 import sys
 from tecplot.exception import *
 from tecplot.constant import *
 
 # Uncomment the following line to connect to a running instance of Tecplot 360:
-# tp.session.connect()
+#tp.session.connect()
 
-# runint ./tecParser.py 'inputFile/output.pl' 0.4 
-argIn = sys.argv 
-pltIn = argIn[1] 
-dy = argIn[2]
-dataOut = argIn[3]
+# runint ./tecParser.py 'inFIle' 'outFile' dx1 dx2 dy1 dy2
+argIn   = sys.argv 
+pltIn   = argIn[1] 
+dataOut = argIn[2] 
+dx1     = argIn[3]
+dx2     = argIn[4] 
+dy1     = argIn[5]
+dy2     = argIn[6]
 
-tp.macro.execute_command(f"""$!ReadDataSet '\"{pltIn}\"'
+tp.macro.execute_command(f"""$!ReadDataSet '\"{pltIn}.plt\"'
   ReadDataOption = New
   ResetStyle = No
   VarLoadMode = ByName
@@ -26,6 +29,6 @@ tp.macro.execute_command('''$!Pick AddAtPosition
 tp.macro.execute_command('''$!FrameControl ActivateByNumber
   Frame = 1''')
 tp.macro.execute_extended_command(command_processor_id='Extract Precise Line',
-    command=f"XSTART = 0 YSTART = {dy} ZSTART = 0 XEND = 0.5 YEND = {dy} ZEND = 0 NUMPTS = 1000 EXTRACTTHROUGHVOLUME = F EXTRACTTOFILE = T EXTRACTFILENAME = '{dataOut}.dat' ")
+    command=f"XSTART = {dx1} YSTART = {dy1} ZSTART = 0 XEND = {dx2} YEND = {dy2} ZEND = 0 NUMPTS = 1000 EXTRACTTHROUGHVOLUME = F EXTRACTTOFILE = T EXTRACTFILENAME = '{dataOut}.dat' ")
 # End Macro.
 

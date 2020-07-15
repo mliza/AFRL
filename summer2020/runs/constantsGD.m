@@ -17,7 +17,9 @@
    Martin E. Liza      06/30/2020      Cleaned up death code 
 %}
 
-function[ GDconstSI, neutGDconstSI, ionGDconstSI ] = constantsGD(testFlag) 
+function[ GDconstSI, neutGDconstSI, ionGDconstSI, attWeightSI ] = constantsGD(testFlag) 
+    pathToSave = '/Users/Martin/Desktop/MDA/figures';
+   % strNeutral = 
 
     % Test flag, if empty tests are skipt else, test are run  
     if nargin < 1
@@ -74,33 +76,38 @@ function[ GDconstSI, neutGDconstSI, ionGDconstSI ] = constantsGD(testFlag)
         fieldIndx = fieldNames{i}; 
         neutralCalc(i)   = neutGDconstSI.(fieldIndx) * 10^4; 
         ionCalc(i)       = ionGDconstSI.(fieldIndx) * 10^4; 
-        neutralConst(i) = GDconstSI.(fieldIndx) * 10^4; % tables 
+        neutralConst(i)  = GDconstSI.(fieldIndx) * 10^4; % tables 
     end
+
+    % labes for text 
+    fieldNamesNeut = { 'N_2' ; 'N'; 'NO'; 'O'; 'O_2' };
+    fieldNamesIon  = { 'N_2^+' ; 'N^+'; 'NO^+'; 'O^+'; 'O_2^+' };
 
     % Logical statement for plots and test results 
     if ~isempty(testFlag)
         % Plots
         figure 
-        plot(neutralConst, neutralConst, 'p', 'MarkerSize', 12)
-        hold on 
-        text( neutralConst, neutralConst, fieldNames,'Fontsize', 12, ...
-              'HorizontalAlignment', 'left','VerticalAlignment', 'top' )
         plot( neutralCalc, neutralCalc, 'd', 'MarkerSize', 12 )
-        text( neutralCalc, neutralCalc, fieldNames,'Fontsize', 11, ...
-              'HorizontalAlignment', 'right','VerticalAlignment', 'bottom' )
-        legend( {'R_{GD}, table ' , 'R_{GD}, calculated'}, ... 
+        hold on
+        text( neutralCalc, neutralCalc, fieldNamesNeut,'Fontsize', 11, ...
+              'HorizontalAlignment', 'left','VerticalAlignment', 'top' )
+        plot(ionCalc, ionCalc, 'p', 'MarkerSize', 12)
+        text( ionCalc, ionCalc, fieldNamesIon,'Fontsize', 12, ...
+              'HorizontalAlignment', 'left','VerticalAlignment', 'top' )
+        legend( {'R_{GD}, neutral ' , 'R_{GD}, ion'}, ... 
                 'Location', 'southeast' )
-        xlabel( 'R_{GD} \times 10^{-4} [m^3/kg]' ) 
-        ylabel( 'R{_GD} \times 10^{-4} [m^3/kg]' ) 
-        title('GladstoneDale constants')
+        xlabel( 'R_{GD} \times 10^{-4}   [m^3/kg]', 'Fontsize', 12 ) 
+        ylabel( 'R_{GD} \times 10^{-4}   [m^3/kg]', 'Fontsize', 12 ) 
+%        title('GladstoneDale constants')
         set( gcf, 'InvertHardcopy', 'off' )
         hold off 
+        saveas(gcf, sprintf('%s/gdConst.png', pathToSave))
 
         % Error Calculation  
         errNeutral = abs( (neutralCalc - neutralConst) ./ neutralConst ) .* 100 ;
         errIon = abs( (ionCalc - neutralConst) ./ neutralConst ) .* 100 ; 
-        round(errNeutral,3) 
-        round(errIon,3) 
+        round(errNeutral,3); 
+        round(errIon,3);
     end 
 
 end %end function constantsGD 

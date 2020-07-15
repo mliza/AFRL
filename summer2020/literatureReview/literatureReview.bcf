@@ -2182,7 +2182,31 @@
     <bcf:datasource type="file" datatype="bibtex">../../../../CHANL/GroupBibFile/chanl.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">mitroy:jop:2010</bcf:citekey>
+    <bcf:citekey order="1">wang:arofm:2012</bcf:citekey>
+    <bcf:citekey order="2">tropina:plc:2018</bcf:citekey>
+    <bcf:citekey order="3">wyckhman:aiaa:2009</bcf:citekey>
+    <bcf:citekey order="4">vogiatzis:scitech:2020</bcf:citekey>
+    <bcf:citekey order="5">pazder:spie:2006</bcf:citekey>
+    <bcf:citekey order="6">vogiatzis:tp:2016</bcf:citekey>
+    <bcf:citekey order="7">vogiatzis:spie:2014</bcf:citekey>
+    <bcf:citekey order="8">gupta:scitech:2020</bcf:citekey>
+    <bcf:citekey order="9">pade:spie:2003</bcf:citekey>
+    <bcf:citekey order="10">kundrapu:jsr:2015</bcf:citekey>
+    <bcf:citekey order="11">mackey:aiaa:2019</bcf:citekey>
+    <bcf:citekey order="12">tropina:jop:2019</bcf:citekey>
+    <bcf:citekey order="13">karl:fdc:2003</bcf:citekey>
+    <bcf:citekey order="14">anderson:tpof:1969</bcf:citekey>
+    <bcf:citekey order="15">alpher:tpof:1959</bcf:citekey>
+    <bcf:citekey order="16">qin:caf:2002</bcf:citekey>
+    <bcf:citekey order="17">siegenthaler:aiaa:2008</bcf:citekey>
+    <bcf:citekey order="18">ren:fdc:2012</bcf:citekey>
+    <bcf:citekey order="19">jumper:arofm:2017</bcf:citekey>
+    <bcf:citekey order="20">mani:jocp:2008</bcf:citekey>
+    <bcf:citekey order="21">mitroy:jop:2010</bcf:citekey>
+    <bcf:citekey order="22">coirier:aerospace:2010</bcf:citekey>
+    <bcf:citekey order="23">wang:ao:2007</bcf:citekey>
+    <bcf:citekey order="24">mani:aiaa:2005</bcf:citekey>
+    <bcf:citekey order="25">fernandez:ieee:1993</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -803,6 +803,36 @@
       \field{pages}{419\bibrangedash 441}
       \range{pages}{23}
     \endentry
+    \entry{mani:jocp:2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3430e0417a72a0155f2b718fefde2eb6}{%
+           family={Ali\bibnamedelima Mani},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Parviz\bibnamedelima Moin},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Meng\bibnamedelima Wang},
+           suffixi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{fullhash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{bibnamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authorbibnamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authornamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authorfullhash}{3430e0417a72a0155f2b718fefde2eb6}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational Physics}
+      \field{month}{2}
+      \field{number}{21}
+      \field{title}{Resolution requirements for aero-optical simulations}
+      \field{volume}{227}
+      \field{year}{2008}
+      \field{pages}{9008\bibrangedash 9020}
+      \range{pages}{13}
+    \endentry
     \entry{mitroy:jop:2010}{article}{}
       \name{author}{2}{}{%
         {{hash=6b885576c30814cb1ff92d9ba8821154}{%
@@ -834,6 +864,150 @@
       \field{year}{2010}
       \field{pages}{202001}
       \range{pages}{1}
+    \endentry
+    \entry{coirier:aerospace:2010}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f3ef8e6f11f12aac78b8e94b9c65f39b}{%
+           family={Coirier},
+           familyi={C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=58aac484a22526d7daf93dff04252b63}{%
+           family={Tramel},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Orlando, FL}%
+      }
+      \list{publisher}{1}{%
+        {{AIAA Paper} 2010-557}%
+      }
+      \strng{namehash}{ed1ed89c32a714db42028b313702ff06}
+      \strng{fullhash}{ed1ed89c32a714db42028b313702ff06}
+      \strng{bibnamehash}{ed1ed89c32a714db42028b313702ff06}
+      \strng{authorbibnamehash}{ed1ed89c32a714db42028b313702ff06}
+      \strng{authornamehash}{ed1ed89c32a714db42028b313702ff06}
+      \strng{authorfullhash}{ed1ed89c32a714db42028b313702ff06}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{48th AIAA Aerospace Sciences Meeting Including the New Horizons Forum and Aerospace Exposition}
+      \field{month}{1}
+      \field{title}{Development of An Integrated Aero-Optics Modeling Capability: OVERFLOW-AeroOptics}
+      \field{year}{2010}
+    \endentry
+    \entry{wang:ao:2007}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ad1506e9f10da2cad4389eac16751647}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a4f73ac848ac3c9c063cd26132a4b7c6}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=be17c750657847fd489802d414210d61}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c38da985658d5f1b44e6b642a8e7267d}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qiuying},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{887cd9a25d135d923f955d7883de4ee1}
+      \strng{fullhash}{2f5b6bee9f2b03804fec120776728b6c}
+      \strng{bibnamehash}{887cd9a25d135d923f955d7883de4ee1}
+      \strng{authorbibnamehash}{887cd9a25d135d923f955d7883de4ee1}
+      \strng{authornamehash}{887cd9a25d135d923f955d7883de4ee1}
+      \strng{authorfullhash}{2f5b6bee9f2b03804fec120776728b6c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Optics}
+      \field{month}{8}
+      \field{number}{23wang-a}
+      \field{title}{Numerical study of evaluating the optical quality of supersonic flow fields}
+      \field{volume}{46}
+      \field{year}{2007}
+      \field{pages}{5545\bibrangedash 5551}
+      \range{pages}{7}
+    \endentry
+    \entry{mani:aiaa:2005}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=3430e0417a72a0155f2b718fefde2eb6}{%
+           family={Ali\bibnamedelima Mani},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Parviz\bibnamedelima Moin},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Meng\bibnamedelima Wang},
+           suffixi={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Toronto, Canada}%
+      }
+      \strng{namehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{fullhash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{bibnamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authorbibnamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authornamehash}{3430e0417a72a0155f2b718fefde2eb6}
+      \strng{authorfullhash}{3430e0417a72a0155f2b718fefde2eb6}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{36th AIAA Plasmadynamics and Lasers Conference}
+      \field{month}{6}
+      \field{title}{Computational Study of Aero-Optical Distortion by Turbulent Wake}
+      \field{year}{2005}
+      \field{pages}{{AIAA Paper} 2005\bibrangedash 4655}
+      \range{pages}{-1}
+    \endentry
+    \entry{fernandez:ieee:1993}{article}{}
+      \name{author}{3}{}{%
+        {{hash=92f3d477fbf81fd6713638b5e22d05bd}{%
+           family={Fernandez},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi A.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=82d51c158bf8203e282104e43a487a75}{%
+           family={Yong},
+           familyi={Y\bibinitperiod},
+           given={Y.\bibnamedelimi C.},
+           giveni={Y\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2a4b4eae4f2296c4f43eed31f3661272}{%
+           family={Ettinger},
+           familyi={E\bibinitperiod},
+           given={R.\bibnamedelimi D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b30b75f02c8094c4eda523d967db10ce}
+      \strng{fullhash}{b30b75f02c8094c4eda523d967db10ce}
+      \strng{bibnamehash}{b30b75f02c8094c4eda523d967db10ce}
+      \strng{authorbibnamehash}{b30b75f02c8094c4eda523d967db10ce}
+      \strng{authornamehash}{b30b75f02c8094c4eda523d967db10ce}
+      \strng{authorfullhash}{b30b75f02c8094c4eda523d967db10ce}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Magnetics}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{A simple adaptive mesh generator for 2-D finite element calculations (optical waveguide theory)}
+      \field{volume}{29}
+      \field{year}{1993}
+      \field{pages}{1882\bibrangedash 1885}
+      \range{pages}{4}
     \endentry
   \enddatalist
 \endrefsection

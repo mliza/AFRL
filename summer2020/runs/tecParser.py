@@ -7,7 +7,7 @@ from tecplot.constant import *
 # Uncomment the following line to connect to a running instance of Tecplot 360:
 #tp.session.connect()
 
-# runint ./tecParser.py 'inFIle' 'outFile' dx1 dx2 dy1 dy2
+# runint ./tecParser.py 'inFile' 'outFile' dx1 dx2 dy1 dy2
 argIn   = sys.argv 
 pltIn   = argIn[1] 
 dataOut = argIn[2] 

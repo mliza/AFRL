@@ -30,15 +30,16 @@ function [ N ] = calculateOPL(plotFlag)
 
     % Import Data
     % outData.data is the zoom in version of outData030.dat
-    dataIn = dataParser('data/outData030.dat');
-    numIn = 0.30; 
+    dataIn = dataParser('data/10Turbulent.dat');
+    numIn = '10Turbulent'; 
     [ constGD, neutrGD, ionGD, attWeight ] = constantsGD(); 
     [ rowIn, colIn ] = size(dataIn.X);
 
     % Create title template 
     dyCut = sprintf('y = %s[m],', num2str(numIn));
-    titleName = strcat(dyCut, ' AoA = 45^{\circ}');
-    saveTitle = strrep(num2str(numIn), '.', '');
+   % titleName = strcat(dyCut, ' AoA = 45^{\circ}');
+   % saveTitle = strrep(num2str(numIn), '.', '');
+    saveTitle = numIn; 
     pathToSave = '/Users/Martin/Desktop/MDA/figures';
 
 
@@ -91,7 +92,7 @@ function [ N ] = calculateOPL(plotFlag)
         set(gcf, 'InvertHardcopy', 'off');
         %xlim([0 0.5]);
         hold off
-        %saveas(gcf, sprintf('%s/indexN%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/indexN%s.png', pathToSave, saveTitle))
 
         % Plot OPL 
         figure 
@@ -107,7 +108,7 @@ function [ N ] = calculateOPL(plotFlag)
         set(gcf, 'InvertHardcopy', 'off');
         %xlim([0 0.5]);
         hold off
-        %saveas(gcf, sprintf('%s/OPL%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/OPL%s.png', pathToSave, saveTitle))
 
         % Plot OPD 
         figure 
@@ -123,7 +124,7 @@ function [ N ] = calculateOPL(plotFlag)
         set(gcf, 'InvertHardcopy', 'off');
         %xlim([0 0.5]);
         hold off
-        %saveas(gcf, sprintf('%s/OPD%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/OPD%s.png', pathToSave, saveTitle))
     end 
 
 end 

@@ -19,7 +19,6 @@
 
 function[ GDconstSI, neutGDconstSI, ionGDconstSI, attWeightSI ] = constantsGD(testFlag) 
     pathToSave = '/Users/Martin/Desktop/MDA/figures';
-   % strNeutral = 
 
     % Test flag, if empty tests are skipt else, test are run  
     if nargin < 1
@@ -101,7 +100,23 @@ function[ GDconstSI, neutGDconstSI, ionGDconstSI, attWeightSI ] = constantsGD(te
 %        title('GladstoneDale constants')
         set( gcf, 'InvertHardcopy', 'off' )
         hold off 
-        saveas(gcf, sprintf('%s/gdConst.png', pathToSave))
+      %  saveas(gcf, sprintf('%s/gdConst.png', pathToSave))
+
+        %Bar Plot 
+        figure 
+        barPlot = bar( [neutralCalc; ionCalc]' ); 
+        set(gca, 'xticklabel', fieldNamesNeut)  
+        legend('R_{GD}, neutral', 'R_{GD}, ion')
+        ylabel( 'R_{GD} \times 10^{-4}   [m^3/kg]', 'Fontsize', 12 ) 
+        xlabel('Species', 'Fontsize', 12)
+        neutLabel = string(neutralCalc); 
+        ionLabel = string(ionCalc); 
+        text( barPlot(1).XData, barPlot(1).YData, neutLabel, 'HorizontalAlignment', ... 
+              'right', 'VerticalAlignment', 'bottom', 'FontSize', 12 ) 
+        text( barPlot(2).XData, barPlot(2).YData, ionLabel, 'HorizontalAlignment', ... 
+              'left', 'VerticalAlignment', 'bottom', 'FontSize', 12 ) 
+        set( gcf, 'InvertHardcopy', 'off' )
+        saveas(gcf, sprintf('%s/barGDconst.png', pathToSave))
 
         % Error Calculation  
         errNeutral = abs( (neutralCalc - neutralConst) ./ neutralConst ) .* 100 ;

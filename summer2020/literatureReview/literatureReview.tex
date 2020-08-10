@@ -7,7 +7,8 @@
 \input{../latexResources/emMacros}
 \input{../latexResources/genMathMacros}
 \usepackage[backend=biber, sorting=none]{biblatex}
-\addbibresource{../../../../CHANL/GroupBibFile/chanl.bib}
+%\addbibresource{../../../../CHANL/GroupBibFile/chanl.bib}
+\addbibresource{chanl.bib}
 \Header{\today}{Literature Review}{Martin E. Liza}
 \usepackage{multirow}
 
@@ -358,7 +359,7 @@
         \end{itemize}
 
 
-    \section{Computation study of aero-optical distortions by a turbulent wake \cite{mani:aiaa:2005}}
+    \section{Computational study of aero-optical distortions by a turbulent wake \cite{mani:aiaa:2005}}
         \begin{itemize}
             \item The small-scales of the flow are found to play a significant role in causing optical aberrations, which places a more stringent grid-resolution requirement than that needed to capture the low order flow statistics. 
             \item The depth of the aberrating flow field is usually smaller than or comparable to the projecting (or imaging) aperture.
@@ -391,7 +392,6 @@
             \item The mesh generator can be controlled by specifying a desired total number of elements in the mesh and monitoring the individual element weights. 
         \end{itemize}
 
-\fi
 
     \section{CFD Mesh Generation: A Practical Guideline}
         \begin{itemize}
@@ -404,6 +404,37 @@
             \item Hermite interpolation, is a method of interpolating data as a polynomial function. Poisson equation can be use or this (read more).  
             \item Are we using structured or unstructured mesh? Are we having matching or unmatching cell faces? 
         \end{itemize}
+
+\fi
+
+% Weeks 9 - 10 
+\iftrue  
+    \section{Displacement Measurements in Air for the Calculable Capacitor \cite{stambaught:cpem:2014}}
+        \begin{itemize}
+            \item The calculable capacitor is the implementation of the Lampard-Thompson theory; which states that the capacitance per length of the cross capacitance of four sections of a segmented conducting shell is a constant $\Parenthesis{\frac{\epsilon}{\pi\ln(2)}}$. 
+            \item The measurements of displacement in air can be extracted from the OPL or a multi-wavelength approach. 
+        \end{itemize}
+
+\fi 
+
+\iftrue 
+    \section{Many-Wavelength Interferometry with Thousands of Lasers for Absolute Distance Measurement \cite{vanDenBerg:prl:2012}}
+        \begin{itemize}
+            \item Optical distance measurement is one of the fields that has been influenced significantly by the advent of the fentosecond frequency comb. 
+            \item The frequency calibration of the individual dots on the camera is performed with an optical parametric oscillator (OPO). 
+        \end{itemize}
+
+    \section{Compensation of the Refractive Index of Air in Laser Interferometer for Distance Measurement: A Review \cite{jang:ipem:2017}}
+        \begin{itemize}
+            \item 
+        \end{itemize} 
+
+    \section{Absolute distance sensing by two laser optical interferometry \cite{klaus:rsi:2013}}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+\fi 
+    
 
 \newpage
 \printbibliography[title=Bibliography]

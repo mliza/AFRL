@@ -26,8 +26,10 @@ function[ GDconstSI, neutGDconstSI, ionGDconstSI, attWeightSI ] = constantsGD(te
     end 
 
     % Physical Constants 
-    vacPermittivitySI = Constant.SI.VacuumPermittivity; %[F/m]
-    avogadroNumber    = Constant.SI.AvogadroNumber;     %[1/mol]
+   % vacPermittivitySI = Constant.SI.VacuumPermittivity; %[F/m]
+   % avogadroNumber    = Constant.SI.AvogadroNumber;     %[1/mol]
+    vacPermittivitySI = 8.854187E-12;   %[F/m]
+    avogadroNumber    = 6.02215E23;     %[1/mol]
 
     % Gladstone-Dale constants, using table 1 from progress report 1 
     GDconstSI.N2 = 2.38E-4; %[kg/m^3]

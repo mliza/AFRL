@@ -1,11 +1,11 @@
 %{ 
-   Date:    07/14/2020
+   Date:    07/27/2020
    Author:  Martin E. Liza
    File:    calculateOPL.m
    Detail:  calculates N, OPL and OPD using the 
             dataParser.m, and the outputs from contantsGD.m
 
-   Ex.     calculateOPL 
+   Ex.     [ N ] = calculateOPL('data/10Laminar.dat', plotFlag)  
 
    Author              Date            Revision
    ----------------------------------------------------------------------
@@ -19,29 +19,27 @@
                                        sliced data from tecplot. OPL, OPD and
                                        index of Reraction plots were added.
    Martin E. Liza      07/14/2020      Made a function that returns the index
-                                       o refraction as a structure.  
+                                       of refraction as a structure.  
+   Martin E. Liza      07/27/2020      Fixed the nargin and this fuction works with one script  
 %}
 
-function [ N ] = calculateOPL(plotFlag) 
-    % Plot flag 
-    if nargin < 1 
+function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag) 
+    
+    pathToSave = 'gridData/plots'; 
+
+    %plotFlag if off, plots are not generate  
+    if nargin < 3
         plotFlag = [ ];
     end 
 
     % Import Data
-    % outData.data is the zoom in version of outData030.dat
-    dataIn = dataParser('data/10Turbulent.dat');
-    numIn = '10Turbulent'; 
+    dataIn = dataParser(dataFile);
     [ constGD, neutrGD, ionGD, attWeight ] = constantsGD(); 
     [ rowIn, colIn ] = size(dataIn.X);
 
     % Create title template 
-    dyCut = sprintf('y = %s[m],', num2str(numIn));
-   % titleName = strcat(dyCut, ' AoA = 45^{\circ}');
-   % saveTitle = strrep(num2str(numIn), '.', '');
-    saveTitle = numIn; 
-    pathToSave = '/Users/Martin/Desktop/MDA/figures';
-
+    saveTitle = strrep(dataFile, 'gridData/', '');
+    saveTitle = strrep(saveTitle, '.dat', '');
 
     % Calculate total Gladsone-Dale Constant and index of refraction 
     totConstGD = ( (constGD.O .* dataIn.rho_O) + (constGD.O2 .* dataIn.rho_O2) + ...
@@ -60,6 +58,11 @@ function [ N ] = calculateOPL(plotFlag)
     GD.neutral = totNeutrGD;
     GD.ion     = totIonGD;
 
+    % gdO2 
+    ndO2Neut =   neutrGD.O2 .* dataIn.rho_O2;  
+    nO2Ion =   ionGD.O2 .* dataIn.rho_O2;  
+    keyboard 
+
     %N.tables   = totConstGD .* dataIn.rho; 
     N.neutral  = totNeutrGD .* dataIn.rho;
     N.ion      = totIonGD .* dataIn.rho;
@@ -70,7 +73,15 @@ function [ N ] = calculateOPL(plotFlag)
         headerName = nFieldName{n};
         indexN = N.(headerName);
         for i = 1:colIn 
-            OPL.(headerName) = dataIn.X .* indexN; 
+
+            %Compare if it is x or y data cutt
+            if ( strcmp(cuttingAxis, 'y') || strcmp(cuttingAxis, 'Y') ) 
+                OPL.(headerName) = dataIn.X .* indexN; 
+            end 
+            if ( strcmp(cuttingAxis, 'x') || strcmp(cuttingAxis, 'X') ) 
+                OPL.(headerName) = dataIn.Y .* indexN; 
+            end 
+
             OPD.(headerName) = OPL.(headerName) - mean(OPL.(headerName));
         end
     end
@@ -82,17 +93,27 @@ function [ N ] = calculateOPL(plotFlag)
         figure 
         for i = 1:length(nFieldName)
             nIndx = nFieldName{i}; 
-            plot(dataIn.X, N.(nIndx), '-')
+
+            %Compare if it is x or y data cutt
+            if ( strcmp(cuttingAxis, 'y') || strcmp(cuttingAxis, 'Y') ) 
+                plot(dataIn.X, N.(nIndx), '-')
+            end 
+            if ( strcmp(cuttingAxis, 'x') || strcmp(cuttingAxis, 'X') ) 
+                plot(dataIn.Y, N.(nIndx), '-')
+            end 
             hold on 
         end 
         legend(nFieldName, 'Location', 'southeast');
-        %title(titleName, 'Interpreter', 'tex');
-        xlabel('distance-x    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        if ( strcmp(cuttingAxis, 'y') || strcmp(cuttingAxis, 'Y') ) 
+            xlabel('distance-x    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
+        if ( strcmp(cuttingAxis, 'x') || strcmp(cuttingAxis, 'X') ) 
+            xlabel('distance-y    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
         ylabel('(n-1)   [ ]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
-        %xlim([0 0.5]);
         hold off
-        saveas(gcf, sprintf('%s/indexN%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/%sindexN%s.png', pathToSave, cuttingAxis, saveTitle))
 
         % Plot OPL 
         figure 
@@ -102,13 +123,16 @@ function [ N ] = calculateOPL(plotFlag)
             hold on 
         end 
         legend(nFieldName, 'Location', 'southeast');
-        %title(titleName, 'Interpreter', 'tex');
-        xlabel('distance-x    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        if ( strcmp(cuttingAxis, 'y') || strcmp(cuttingAxis, 'Y') ) 
+            xlabel('distance-x    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
+        if ( strcmp(cuttingAxis, 'x') || strcmp(cuttingAxis, 'X') ) 
+            xlabel('distance-y    [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
         ylabel('(OPL - 1)   [m]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
-        %xlim([0 0.5]);
         hold off
-        saveas(gcf, sprintf('%s/OPL%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/%sOPL%s.png', pathToSave, cuttingAxis, saveTitle))
 
         % Plot OPD 
         figure 
@@ -118,13 +142,17 @@ function [ N ] = calculateOPL(plotFlag)
             hold on 
         end 
         legend(nFieldName, 'Location', 'southeast');
-        %title(titleName, 'Interpreter', 'tex');
-        xlabel('distance-x   [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        if ( strcmp(cuttingAxis, 'y') || strcmp(cuttingAxis, 'Y') ) 
+            xlabel('distance-x   [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
+        if ( strcmp(cuttingAxis, 'x') || strcmp(cuttingAxis, 'X') ) 
+            xlabel('distance-y   [m]', 'Interpreter', 'tex', 'Fontsize', 12);
+        end 
         ylabel('OPD    [m]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
-        %xlim([0 0.5]);
         hold off
-        saveas(gcf, sprintf('%s/OPD%s.png', pathToSave, saveTitle))
+        saveas(gcf, sprintf('%s/%sOPD%s.png', pathToSave, cuttingAxis, saveTitle))
     end 
+    clear all; clc; close all; 
 
 end 

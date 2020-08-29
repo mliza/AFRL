@@ -1,0 +1,90 @@
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/templates/homeworkTemplate}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/equationMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/mathMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/pictureMacros}
+\Header{\today}{Final Report}{Martin E. Liza}
+     \usepackage{setspace} 
+    % \doublespacing
+\title{\textbf{Aero Optics in High Speed Flows}}
+\author{Martin E. Liza}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{/Users/Martin/Google Drive/UoA/CHANL/GroupBibFile/chanl.bib}
+
+\begin{document}
+    \maketitle 
+    \section{Introduction} 
+        \indent The Unites States Air Force Office of Scientific Research has identified aero-optics to be of paramount concern during hypersonic flight \cite{jones:usafte:2009}. As it is well known, optical distortions have a huge effect on the performance of airborne laser systems for communication, target tracking, and directed-energy weapons \cite{wang:arofm:2012}. \\
+
+        \indent In a non equilibrium gas, the fluid properties such as density, temperature, pressure and velocity vary in space and time; however, density fluctuations are the most relevant for optical distortions \cite{wyckhman:aiaa:2009}. \\ 
+
+        \indent It is known that the index of refraction can be calculated using the Gladstone-Dale relation given on equation \eqref{eq:gladstoneDale}.  \\
+
+        \indent It is known that the polarizability is directly linked to the Gladstone-Dale constant, which is a constant proportional to the molecule's polarizability. Note, that at high speeds, the Gladstone-Dale might not be a constant because particles are not in their neutral state, but instead are found on their excited state \cite{tropina:plc:2018}. \\
+
+        \indent During the literature review, the polarizability constants were found for neutral and ion species. These constants are given on table \ref{tab:polarizability}. 
+
+        \begin{table}[h]
+        	\centering
+            \begin{tabular}{| c | c | c |}
+                \hline 
+                \textbf{Species}  & $\bm{\alpha \times 10^{30}\Units{m}}$ & \textbf{Ref.}             \\
+                \hline 
+                $\Sub{N}{2}$      & $1.740$                               & \cite{lide:1997}          \\
+                $N$               & $1.100$                               & \cite{lide:1997}          \\
+                $\Sub{O}{2}$      & $1.581$                               & \cite{lide:1997}          \\
+                $O$               & $0.802$                               & \cite{lide:1997}          \\
+                $NO$              & $1.700$                               & \cite{lide:1997}          \\
+                \hline 
+                $\UpSub{N}{2}{+}$ & $2.386$                               & \cite{mccormack:pra:1991} \\
+                $\Up{N}{+}$       & $0.559$                               & \cite{jacobson:pra:1996}  \\
+                $\UpSub{O}{2}{+}$ & $0.238$                               & \cite{stewart:mp:1975}    \\
+                $\Up{O}{+}$       & $0.345$                               & \cite{stewart:mp:1975}    \\
+                $\Up{NO}{+}$      & $1.021$                               & \cite{feher:cpl:1993}     \\
+                \hline 
+            \end{tabular}
+        \caption{Polarizability for ions and neutral species}
+        \label{tab:polarizability}
+        \end{table}
+
+
+
+    \section{Methodology}
+        \indent Post processing scripts were implemented in MATLAB, one of them calculates the Gladstone-Dale constants for neutral and ion species; the other one calculates the optical properties using the Gladstone-Dale constants. The theoretical background from these $2$ scripts is provided right below.  \\ 
+
+        \indent The Gladstone-Dale constants were calculated using the polarizability constants given on table \ref{tab:polarizability} on units of polarizability volume $\SqBracket{^{\circ}A^3} = 10^{-24}\Units{cm^3}$. For this analysis, the polarizability units must be converted from $\Units{cm^3}$ to $\UnitsFrac{m^3}{kg}$. \\
+
+        \indent Lets start by calculating the polarizability in units of $\UnitsFrac{cm^3}{moles}$ by multiplying the polarizability volume $\Parenthesis{\alpha}$ by the Avogadro's number $\Parenthesis{\Sub{N}{A}}$:
+
+        $$ \Sub{\alpha}{\UnitsFrac{cm^3}{moles}} =  \Sub{\alpha}{\Units{cm^3}} \times \Sub{N}{A} \UnitsFrac{cm^3}{moles} $$
+
+        \indent Now, the polarizability expressed on units of $\UnitsFrac{cm^3}{moles}$, can be converted to units of $\UnitsFrac{m^3}{kg}$, by using the molar mass $\Parenthesis{M}$ expressed on units of $\UnitsFrac{kg}{moles}$.
+
+        $$ \Sub{\alpha}{\UnitsFrac{m^3}{kg}} = \Sub{\alpha}{\UnitsFrac{cm^3}{moles}} \times 10^{-6}\UnitsFrac{m^3}{cm^3} \times \frac{1}{M} \UnitsFrac{moles}{kg} $$
+
+        \indent The Gladstone-Dale constant $\Parenthesis{\Sub{R}{GD}}$ is calculated by multiplying the polarizability $\Parenthesis{\alpha}$ by $2\pi$, and is given on  equation \eqref{eq:gladstoneDale}, which was derived from \cite{mitroy:jop:2010}. 
+        \begin{equation}\label{eq:gladstoneDale}
+            \Sub{R}{GD} = 2\pi \times \alpha \UnitsFrac{m^3}{kg}
+        \end{equation}
+
+        \indent The index of refraction $\Parenthesis{n}$, equation \eqref{eq:indxOfRefraction} was calculated using the Gladstone-Dale relation and using the constants calculated on equation \eqref{eq:gladstoneDale}.
+        \begin{equation}\label{eq:indxOfRefraction} 
+            n = 1 + \Sub{R}{GD}\Sub{\rho}{medium} 
+        \end{equation}
+
+        \indent The Optical Path Length is calculated by equation \eqref{eq:OPL}
+        \begin{equation}\label{eq:OPL}
+            OPL = \int n\,dl 
+        \end{equation} 
+
+    \section{Results}
+        \indent The results from equation \eqref{eq:gladstoneDale} are give on figure \ref{fig:gdConstants}. 
+        \pic{0.6}{barGDconst}{$\Sub{R}{GD}$ for neutral and ion species}{fig:gdConstants} 
+
+    \section{Conclusions} 
+
+    \section{Future Work}
+
+        \newpage 
+        \printbibliography[title=Bibliography]
+
+\end{document}

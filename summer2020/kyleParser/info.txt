@@ -1,0 +1,12 @@
+alpha.dat (matlab output) , where A = [m^3] 
+vibrationalNumber, polarizabiltyJ5A, polarizabilityJ15A, polarizabilityJ21A
+
+dsboltz.dat (STS output) 
+vibrationalNumber, nonBoltzmanDist, boltzmanDist 
+each zone corresponds to a different time step (grep zone dstboltz.dat | wc -l) 
+
+Tresult-temp.dat (STS output) 
+timeMicroSec, translationalTempK, theoreticalVibrationalTempK, experiemntalVibrationalTempK 
+
+Output result  
+timeMicroSec, boltzmanDist, nonBoltzmanDist

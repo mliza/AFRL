@@ -1,0 +1,162 @@
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/templates/beamerTemplate}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/equationMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/mathMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/beamerMacros}
+\input{/Users/Martin/Documents/Documents/gitRepo/Scripts/Latex/macros/pictureMacros}
+
+\usetheme{UoA}
+%\usepackage{draftwatermark} 
+\setbeamercolor{background canvas}{bg=}
+%\SetWatermarkScale{1.5}
+%\SetWatermarkLightness{0.93} 
+%\SetWatermarkText{Final Draft} 
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{/Users/Martin/'Google Drive'/UoA/CHANL/GroupBibFile/chanl.bib} 
+\usepackage{subcaption} 
+ 
+
+%No needed if using UoA theme
+\definecolor{redUA}{HTML}{CC0033} 
+\definecolor{blueUA}{HTML}{003366} 
+
+ %\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\TitlePage{Aero-Optics in High Speed Flows and Optical Meshing}{Model Description Acceptance (MDA)}{Dr. Kyle Hanquist \\ Martin E. Liza}{\today}
+
+\begin{document}
+
+    % Frame title 
+    \begin{frame}
+        \maketitle 
+    \end{frame}
+
+    \begin{frame}{Quad-Chart}
+        \QuadChart{\color{blueUA} Objectives}{ \item \small{Investigate Aero-Optical properties of high speed flows.} 
+                                               \item \small{Generate an Optical Mesh.}  }
+                  {\color{blueUA} Significance}{ \item \small{This study will allow to gain a better understanding on how a high speed flows disturb an optical signal.} }
+                  {\color{blueUA}Approach}{ \item \small{The Aero-Optics model will be implemented in Lemans.} 
+                                            \item \small{A new Aero-Optics module will be added to Lemans.}}
+                  {\color{blueUA}Validation}{ \item \small{Literature review.} 
+                                              \item \small{SME's inputs.}
+                                              \item \small{Aero-Optics} \tiny{MATLAB} \small{script}. }
+    \end{frame}
+   
+    \begin{frame}{Aero-Optics Module}
+        \begin{minipage}{\textwidth}
+            \linespread{1.4}
+            \tableofcontents%[currentsection, subsectionstyle=ball] 
+        \end{minipage}
+    \end{frame}
+
+    \begin{frame}{$ $ }
+        \Huge \color{blueUA}{\textbf{Optical Mesh}}
+    \end{frame}
+
+    \section{Optical Mesh}
+    \subsection{Creates a mesh that is finer than the fluids mesh, and calculates the finer fluid densities using the fluids mesh. \\}
+    \begin{frame}{Optical Mesh}
+        \begin{block}{Problem}
+            The resolution needed to fully capture the high frequency errors is only visible on a fine mesh.     
+        \end{block}
+        \begin{exampleblock}{Proposed Solution}
+            A sub-grid with a finer mesh, will be use for this purpose. This method will combine the accuracy of a finer mesh with the rapid convergence of a coarser mesh. The generation of this new grid will based on the flow properties and optical properties.  
+        \end{exampleblock}
+    \end{frame}
+
+    \begin{frame}{Proposed Solution}
+        \begin{itemize}
+            \item The coarse densities $\Parenthesis{\Sub{\rho}{c}}$ will be calculated on the coarse grid by the CFD model.
+            \item The fine densities $\Parenthesis{\Sub{\rho}{s}}$ will be calculated on the fine grid by interpolating the values from the coarse grid.
+            \item $ \frac{12\pi^3\Sub{B}{p}}{7\bm{\lambda}^2}\SqBracket{\frac{ \Parenthesis{\bm{n}-1}^2 \epsilon^{4/3}}{\bm{\Sub{c}{s}} ^4} } \Parenthesis{\frac{\Sub{l}{c}}{2\pi }}^{7/3} \bm{\Delta z} < \zeta^{\text{\footnotemark}}$
+            \item where: $\Sub{B}{p}$ is a constant; $\bm{\lambda}$ is the wavelength; $\bm{n}$ is the index of refraction, $\epsilon$ is the turbulent dissipation rate, $\bm{\Sub{c}{s}}$ is the speed of sound, $\Sub{l}{c}$ is the grid resolution, $\bm{\Delta z}$ is the wavefront distortion, $\zeta$ is the energy ration threshold.   
+        \end{itemize}
+        \footnotetext[1]{Parviz Moin, Ali Mani, Meng Wang. "Resolution requirements for aero-optical simulations". In \textit{Journal of Computational Physics 227.21} (Feb. 2008), pp. 9008-9020  } 
+    \end{frame}
+
+    \begin{frame}{$ $ }
+        \Huge \color{blueUA}{\textbf{Gladstone-Dale Constants}}
+    \end{frame}
+    \section{Gladstone-Dale Constants}
+    \subsection{Calculates the Gladstone-Dale constants using polarizabilities for neutral and ion species.\\}
+    \begin{frame}{Gladstone-Dale Constants}
+        \begin{block}{Problem}
+            Current models calculate the Gladstone-Dale constants using neutral species; ion species are ignored.
+        \end{block}
+        \begin{exampleblock}{Proposed Solution}
+            Values for ion polarizabilities were found in literature, from these values the Gladstone-Dale constants were calculated. 
+        \end{exampleblock}
+    \end{frame}
+
+    % There results in here were cut at dy1 = dy2 = 0.25, dx1= 1, dx2 = 1.27 (name of the file is 0.25) 
+    % There results in here were cut at dy1 = dy2 = 0.30, dx1= 1.25, dx2 = 2.25 (name of the file is 0.30) 
+    \begin{frame}{Preliminary Results}
+       % \pic{0.41}{gdConst.png}{}{gdConst}
+        \pic{0.41}{barGDconst.png}{Gladstone-Dale Constants, $11$ species}{gdConst}
+    \end{frame}
+
+    \begin{frame}{$ $ }
+        \Huge \color{blueUA}{\textbf{Aero-Optics}}
+    \end{frame}
+    \section{Aero-Optics}
+    \subsection{Calculates the index of refraction $\Parenthesis{n}$, Optical Path Difference $\Parenthesis{OPD}$ and Optical Path Length $\Parenthesis{OPL}$.}
+
+    \begin{frame}{Laminar $\Parenthesis{x = 2\Units{m}}$}
+            \begin{figure}[t]
+                \vspace{-1.5cm}
+                \centering 
+                $$\scriptstyle{ AoA = 10^{\circ},\;\; \Sub{U}{0}=3430\UnitsFrac{m}{s},\;\; \Sub{V}{0}=-605\UnitsFrac{m}{s},\;\;  M = 10.15\Units{\;},\;\; \Sub{\rho}{0} = 3.1\times 10^{-2}\UnitsFrac{kg}{m^3} }$$
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{10TempLaminar}
+                \caption{Temperature Contour plot}
+            \end{subfigure} 
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{YindexN10Laminar}
+                \caption{Index of Refraction on $\hat{y}$ plot}
+            \end{subfigure}
+        \end{figure}
+    \end{frame}
+    \begin{frame}{Laminar $\Parenthesis{y=0.1\Units{m}}$}
+            \begin{figure}[t]
+                \vspace{-1.5cm}
+                \centering 
+                $$\scriptstyle{ AoA = 10^{\circ},\;\; \Sub{U}{0}=3430\UnitsFrac{m}{s},\;\; \Sub{V}{0}=-605\UnitsFrac{m}{s},\;\;  M = 10.15\Units{\;},\;\; \Sub{\rho}{0} = 3.1\times 10^{-2}\UnitsFrac{kg}{m^3} }$$
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{10Laminar}
+                \caption{Density Contour plot}
+            \end{subfigure} 
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{indexN10Laminar}
+                \caption{Index of Refraction on $\hat{x}$ plot}
+            \end{subfigure}
+        \end{figure}
+    \end{frame}
+
+
+    \begin{frame}{Turbulent $\Parenthesis{y=0.1\Units{m}}$}
+            \begin{figure}[t]
+                \vspace{-1.5cm}
+                \centering 
+                $$\scriptstyle{ AoA = 10^{\circ},\;\; \Sub{U}{0}=3430\UnitsFrac{m}{s},\;\; \Sub{V}{0}=-605\UnitsFrac{m}{s},\;\;  M = 10.15\Units{\;},\;\; \Sub{\rho}{0} = 3.1\times 10^{-2}\UnitsFrac{kg}{m^3} }$$
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{10Turbulent}
+                \caption{Density Contour plot}
+            \end{subfigure} 
+            \begin{subfigure}{0.49\linewidth} \centering 
+                \includegraphics[scale=0.2]{indexN10Turbulent}
+                \caption{Index of Refraction on $\hat{x}$ plot}
+            \end{subfigure}
+        \end{figure}
+    \end{frame}
+
+
+    \begin{frame}{Questions + Discussion}
+        \begin{itemize}
+            \item Post processing vs. coupled into a CFD model. \\
+            \item What kind of discretization is the most appropriate for the optical mesh.\\
+            \item How to determine the size of the optical mesh? \\
+            \item Mesh Implementation? \\  
+            \item What kind of flows and optics characteristics shall we be looking at? \\ 
+        \end{itemize}
+    \end{frame}
+    
+\end{document}

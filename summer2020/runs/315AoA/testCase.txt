@@ -1,0 +1,4 @@
+soundSpeed = 343 %[m/s]
+V_x = 3  %[M]
+V_y = -3 %[M] 
+AoA = -45 %[deg]

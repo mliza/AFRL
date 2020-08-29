@@ -23,12 +23,12 @@
    Martin E. Liza      07/27/2020      Fixed the nargin and this fuction works with one script  
 %}
 
-function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag) 
+function [ ] = calculateOPL(dataFile, cuttingAxis, species, plotFlag) 
     
     pathToSave = 'gridData/plots'; 
 
     %plotFlag if off, plots are not generate  
-    if nargin < 3
+    if nargin < 4
         plotFlag = [ ];
     end 
 
@@ -42,32 +42,35 @@ function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag)
     saveTitle = strrep(saveTitle, '.dat', '');
 
     % Calculate total Gladsone-Dale Constant and index of refraction 
-    totConstGD = ( (constGD.O .* dataIn.rho_O) + (constGD.O2 .* dataIn.rho_O2) + ...
-                   (constGD.N .* dataIn.rho_N) + (constGD.NO .* dataIn.rho_NO) + ...
-                   (constGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
+    neutrSpGD = ( (neutrGD.O .* dataIn.rho_O) + (neutrGD.O2 .* dataIn.rho_O2) + ...
+                  (neutrGD.N .* dataIn.rho_N) + (neutrGD.NO .* dataIn.rho_NO) + ...
+                  (neutrGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
 
-    totNeutrGD = ( (neutrGD.O .* dataIn.rho_O) + (neutrGD.O2 .* dataIn.rho_O2) + ...
-                   (neutrGD.N .* dataIn.rho_N) + (neutrGD.NO .* dataIn.rho_NO) + ...
-                   (neutrGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
-
-    totIonGD   = ( (ionGD.O .* dataIn.rho_O) + (ionGD.O2 .* dataIn.rho_O2) + ...
+    % Calculates the ion GD constants for 5 species 
+    if (species == 5) % for 5 species 
+        ionSpGD   = ( (ionGD.O .* dataIn.rho_O) + (ionGD.O2 .* dataIn.rho_O2) + ...
                    (ionGD.N .* dataIn.rho_N) + (ionGD.NO .* dataIn.rho_NO) + ...
                    (ionGD.N2 .* dataIn.rho_N2) ) ./ dataIn.rho; 
+    end 
 
-    %GD.tables  = totConstGD;  
-    GD.neutral = totNeutrGD;
-    GD.ion     = totIonGD;
+    % Calculates the ion GD constants for 11 species 
+    if (species == 11) 
 
-    % gdO2 
-    ndO2Neut =   neutrGD.O2 .* dataIn.rho_O2;  
-    nO2Ion =   ionGD.O2 .* dataIn.rho_O2;  
-    keyboard 
+        ionSpGD   = ( (ionGD.O .* dataIn.rho_Op) + (ionGD.O2 .* dataIn.rho_O2p) + ...
+                      (ionGD.N .* dataIn.rho_Np) + (ionGD.NO .* dataIn.rho_NOp) + ...
+                      (ionGD.N2 .* dataIn.rho_N2p) ) ./ dataIn.rho; 
+    end 
 
-    %N.tables   = totConstGD .* dataIn.rho; 
-    N.neutral  = totNeutrGD .* dataIn.rho;
-    N.ion      = totIonGD .* dataIn.rho;
 
-    % Calculating OPL and OPD 
+    % Populates GD and N structures  
+    GD.neutral = neutrSpGD;
+    GD.ion     = ionSpGD;
+ %   GD.total   = GD.neutral + GD.ion; 
+    N.neutral  = neutrSpGD .* dataIn.rho;
+    N.ion      = ionSpGD .* dataIn.rho;
+%    N.total    = N.neutral + N.ion; 
+
+    % Calculates OPL and OPD 
     nFieldName = fieldnames(N);
     for n = 1:length(nFieldName)
         headerName = nFieldName{n};
@@ -113,7 +116,7 @@ function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag)
         ylabel('(n-1)   [ ]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
         hold off
-        saveas(gcf, sprintf('%s/%sindexN%s.png', pathToSave, cuttingAxis, saveTitle))
+       % saveas(gcf, sprintf('%s/%sindexN%s.png', pathToSave, cuttingAxis, saveTitle))
 
         % Plot OPL 
         figure 
@@ -132,7 +135,7 @@ function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag)
         ylabel('(OPL - 1)   [m]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
         hold off
-        saveas(gcf, sprintf('%s/%sOPL%s.png', pathToSave, cuttingAxis, saveTitle))
+       % saveas(gcf, sprintf('%s/%sOPL%s.png', pathToSave, cuttingAxis, saveTitle))
 
         % Plot OPD 
         figure 
@@ -151,8 +154,8 @@ function [ ndO2Neut, ndO2Ion ] = calculateOPL(dataFile, cuttingAxis, plotFlag)
         ylabel('OPD    [m]','Interpreter', 'tex', 'Fontsize', 12);
         set(gcf, 'InvertHardcopy', 'off');
         hold off
-        saveas(gcf, sprintf('%s/%sOPD%s.png', pathToSave, cuttingAxis, saveTitle))
+       % saveas(gcf, sprintf('%s/%sOPD%s.png', pathToSave, cuttingAxis, saveTitle))
     end 
-    clear all; clc; close all; 
+   % clear all; clc; close all; 
 
 end 
